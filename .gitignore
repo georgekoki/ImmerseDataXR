@@ -1,0 +1,27 @@
+**/[Ll]ibrary/
+**/[Ll]ogs/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/UserSettings/
+**/.vs/
+**/.vscode/
+**/.vsconfig
+**/*.csproj
+**/*.sln
+**/*.exe
+**/UIElementsSchema
+.idea
+/External/.build/.*
+**/__pycache__/
+/Assets/Samples
+Assets/Samples.meta
+Assets/Resources/MAGES/config.bytes
+Assets/Resources/MAGES/config.bytes.meta
+Assets/Resources/MAGES/JARIAHistoryData.asset
+Assets/Resources/MAGES/JARIAHistoryData.asset.meta
+Assets/Photon
+Assets/Photon.meta
+Assets/TextMesh Pro
+Assets/TextMesh Pro.meta
