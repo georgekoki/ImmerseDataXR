@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Scenes/EmptyScene.unity
+    guid: e056e1ed013fa8e439c51c766e628945
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a4aee526dc0a2584f86ea11f5464e853, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80476771a96e44a42878f1ccecb8d853, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3cd3186681c38d6499f4f463f3025816, type: 2}

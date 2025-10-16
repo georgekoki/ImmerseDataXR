@@ -1,0 +1,899 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1510659650, guid: 1c1a21e1309d25de02b27da979cbb376, type: 3}
+  m_Name: PathReferences
+  m_EditorClassIdentifier: 
+  gameObjectToPath:
+    serializedData:
+    - Key: {fileID: 919132149155446097, guid: 7639005907f4db049928463d76d6823d, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Cube.fbx
+    - Key: {fileID: 919132149155446097, guid: 9a891f5ba39d5b942bf516d8b3ee685b, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Sphere.fbx
+    - Key: {fileID: 908942595246231463, guid: a361a3293222e28499db2e161eeebd67, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+    - Key: {fileID: 2860800430695251868, guid: accfd374445ee924bb22fbddb70cbca5, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+    - Key: {fileID: 5789310592009211286, guid: 7c9b2ed83d7797e4e80c1c293c23f56b, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+    - Key: {fileID: 6016984384870593031, guid: bae902c8f9b987d458c0e62bd4ac827c, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+    - Key: {fileID: 3033575757623623128, guid: 3902a40383991d54fbc8143121103016, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Cube.prefab
+    - Key: {fileID: 6490112780918482942, guid: 8d48d0fb72b5be24a922b70bb90b01d0, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/CharacterCustomizationCanvasEmpty.prefab
+    - Key: {fileID: 1465634988327954177, guid: 2e0f502d0e2c36c4b9ecbca762a814c8, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/NetworkingUIEmpty.prefab
+    - Key: {fileID: 695946910612231727, guid: 088eb5f6d86a41a4bb5e46f63be799a1, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationExitEmpty.prefab
+    - Key: {fileID: 6427668898083739751, guid: a50d7aac7954fe04291489ffc6986adb, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationStartEmpty.prefab
+    - Key: {fileID: 2775463711314371571, guid: ead8fc7302d200d49ba634994d26e0b6, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/Session
+        Progress UI Empty Scene.prefab
+    - Key: {fileID: 8482891306298584424, guid: 9db860b120b44c7419435384247047a0, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/SessionOverviewEmptyScene.prefab
+    - Key: {fileID: 6186828216651065167, guid: fc13146416a0ba74caf5713ff7259826, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/UICreateSessionEmpty.prefab
+    - Key: {fileID: 1712265545480742366, guid: 2f29532ddc09aa24db159404463bdebe, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Sphere.prefab
+    - Key: {fileID: 919132149155446097, guid: b1bbfa0dc812c4d499097b7a27ebfc6f, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholBottle/Alcohol_Bottle.fbx
+    - Key: {fileID: 919132149155446097, guid: b79456b1fb1947f43bcb2c418d790e2a, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholSpray/Alcohol_Spray.fbx
+    - Key: {fileID: 919132149155446097, guid: 04e6a83d04aa752468e30eb5ba96285e, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball.fbx
+    - Key: {fileID: 919132149155446097, guid: 8361a23a08a53204e8ce95478d7251e5, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball_Grabbed.fbx
+    - Key: {fileID: 919132149155446097, guid: c2ae6c92be4bc054e9f596ba2ccc512a, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/HolographicArea/TeleportMarker.fbx
+    - Key: {fileID: 6293979293209514197, guid: 970b33ad8600c4649be04b135c85fdcd, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/ORamaVR_Logo_Wall.prefab
+    - Key: {fileID: 4837517209671876475, guid: 5933741e7d5cb3c49a29e4af1e99771c, type: 3}
+      Value: "Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/\u039FRamaVR_Pictogram_Screen.prefab"
+    - Key: {fileID: 919132149155446097, guid: 910095a07e8a2884c90fa2fedf4a885d, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/MedicineBottle/Medicine_Bottle.fbx
+    - Key: {fileID: 919132149155446097, guid: 22504544baeba8c4d84b73db45459ef8, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.fbx
+    - Key: {fileID: 7204250368189503839, guid: f742c40246c916248b2527348185f947, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.prefab
+    - Key: {fileID: 919132149155446097, guid: 6f272ee06d8525a46b5af979f2e5f90a, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/ReticleRotating/Recticle_rotating_01.FBX
+    - Key: {fileID: 919132149155446097, guid: 0a1c3b302c1ce4f4b99f291ee21e4114, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Room/NXT_Room.fbx
+    - Key: {fileID: 919132149155446097, guid: c5caf3921e332a8468ed999715c56e89, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Scalpel/Scalpel.FBX
+    - Key: {fileID: 919132149155446097, guid: a775d2b87d6bb614caf0cf40a8ac96ae, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/SkinBox/skin
+        box.fbx
+    - Key: {fileID: 919132149155446097, guid: a25a29f2773b3f445b45392566394677, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Syringe/Syringe.fbx
+    - Key: {fileID: 919132149155446097, guid: f06941910241fd447b7076ca2bcaea99, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/TV/TV_stand.fbx
+    - Key: {fileID: 1050945768559797074, guid: b2718303e696afb4a9b79fd28da2d2a8, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+    - Key: {fileID: 3654972469150009679, guid: 11dfeed31a4cfb1478f61cc355963415, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+    - Key: {fileID: 3500031255184576477, guid: 7125151d6ca14e741b4ff4ec16c08069, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+    - Key: {fileID: 8674909012673925472, guid: 5211cafed657b7c48ac70017d8492fd2, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+    - Key: {fileID: 4461789498622482572, guid: 214f32cebf2941a45be83ac5ea8160ef, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Bottle/Alcohol_Bottle.prefab
+    - Key: {fileID: 2663334325131598747, guid: 128bc55980bc2644a97fe5bc205ea02e, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Spray/Alcohol_Spray.prefab
+    - Key: {fileID: 8151967033735030569, guid: b7c6043b6b1aa0d43ac7c3329ef5b890, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/BinArea/BinArea.prefab
+    - Key: {fileID: 6811890992725081840, guid: 2d19969147df51a499fe3cd13ddb040b, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cotton_Ball/Cotton_Ball.prefab
+    - Key: {fileID: 4675479889605947690, guid: f59dabde098374045b184073686ff8e6, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cupboards/HandPoses/Cupboard.prefab
+    - Key: {fileID: 5334127861141958002, guid: 668f16e2d3bf3d143a296dbd56bc6b76, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/DisinfectArea/DisinfectArmColldier.prefab
+    - Key: {fileID: 8039857778618746083, guid: e1765c35a92cf464c9959d7ba1498552, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/CutLine.prefab
+    - Key: {fileID: 7833148477243739317, guid: 5f882da6271bad54784a066ead6e34e4, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/Scalpel.prefab
+    - Key: {fileID: 3765945099689444981, guid: 5d363e2a0bab66f4584722d7efd02201, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FloorCollider.prefab
+    - Key: {fileID: 6126062374091248628, guid: ceac3ce2e2eb35745bfa7298cb49236a, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/CharacterCustomizationCanvasMedical.prefab
+    - Key: {fileID: 1465634988327954177, guid: de8cbfc0f07b6ae4db412c13fbbe776a, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/NetworkingUIMedical.prefab
+    - Key: {fileID: 695946910612231727, guid: 80be6f865405a3c4ab211bd19c26cdd8, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationExitMedical.prefab
+    - Key: {fileID: 8287548645498771471, guid: 212eb4c57a8af914c8c64d215ad64056, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationStartMedical.prefab
+    - Key: {fileID: 1061030109764770952, guid: 6b78343f46d576e44ae174a3c020e61e, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/UICreateSessionMedical.prefab
+    - Key: {fileID: 4607341748483080585, guid: bd177487123c5e84bbb9c3df6e71421d, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Medicine_Bottle/Medicine_Bottle.prefab
+    - Key: {fileID: 8919781291093236745, guid: 80a4e740ebf83d848a3e11920a919a1c, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeAdminister.prefab
+    - Key: {fileID: 8782387715358882742, guid: 6f9e4579a9c818346ae420b92a5061cf, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeFinal.prefab
+    - Key: {fileID: 4821283478671805728, guid: 435aa8ea7776f7d4fa1f9a9d9ab3f116, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeInteractable.prefab
+    - Key: {fileID: 4044804350837727676, guid: ccc56b4a32cb1a94196d31d41638fd36, type: 3}
+      Value: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/TV_Stand.prefab
+    - Key: {fileID: 2861492543311580975, guid: ce98b33564b6da64796510ac46339ab3, type: 3}
+      Value: Assets/XRPlotLib/Discarded/ShaderPlot/Cube.prefab
+    - Key: {fileID: 8204215609818438151, guid: 2e82544e9d86a29419f98cb564c9efaf, type: 3}
+      Value: Assets/XRPlotLib/Resources/Datasets/Plane.prefab
+    - Key: {fileID: 1607707941550889129, guid: 5caaf1dae5d0171498f6f189be1a5812, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/AxisValue.prefab
+    - Key: {fileID: 4910100258417797379, guid: 5b6b14a87240bec43a63394b2f31c4c6, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/BarDataPoint.prefab
+    - Key: {fileID: 4479308063162370676, guid: 2b611b6eae2fab645ac62000ddb3cdc9, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/ConnectedPlot.prefab
+    - Key: {fileID: 3987782063592244079, guid: 7c157ecb8de72a3468bf582d0785eece, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/DataPoint.prefab
+    - Key: {fileID: 8137864884402921353, guid: 9011023f8491c5442afd736d6934cdae, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/Edge.prefab
+    - Key: {fileID: 7621417651331093014, guid: d3f3faa9b0a48c34eb386fff4ba23a2f, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/Note.prefab
+    - Key: {fileID: 3822750132580823082, guid: 48c6172d7222cd84da9ee95e428744fa, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/PrefabPlot.prefab
+    - Key: {fileID: 4508506026903379683, guid: 402c9c8366acc5042bd1030dff0fc5c7, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/Tooltip.prefab
+    - Key: {fileID: 1228747450885582403, guid: 383c5ee684b629b40bd8fb12a36928b9, type: 3}
+      Value: Assets/XRPlotLib/Resources/Prefabs/UI Column Picker/Column.prefab
+    - Key: {fileID: 919132149155446097, guid: 9e1c97fc44f9a8744b61b58f72c56de4, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Editor/Resources/DebugProbe.fbx
+    - Key: {fileID: 1153602445894428, guid: cf6cbdd672089a84796e55a21fed1cbe, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUICanvas.prefab
+    - Key: {fileID: 1822588063230394, guid: f6b1a0fe75d5009449cf55ae76220e2b, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUIPersistentCanvas.prefab
+    - Key: {fileID: 6048135192916836887, guid: 7c78b588b2e1f7c4a86ca4a985cf6e4a, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIBitField.prefab
+    - Key: {fileID: 1349998662384948, guid: f6ce33b91f6ffe54cadacbf4bb112440, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIButton.prefab
+    - Key: {fileID: 1213106801707016, guid: 77c185820dd1a464eac89cae3abccddf, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIColor.prefab
+    - Key: {fileID: 1311110376158742, guid: 988db55689193434fb0b3b89538f978f, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumField.prefab
+    - Key: {fileID: 3734445388003485314, guid: b2da6b27df236b144b3516ed8e7d36ac, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumHistory.prefab
+    - Key: {fileID: 1100371661045084, guid: d8c744701b43c864b88e7f8144e19bc5, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFloatField.prefab
+    - Key: {fileID: 1880654171993120, guid: 1c87ab2ce8b8b304d98fbe9a734b1f74, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFoldout.prefab
+    - Key: {fileID: 1674137683461036, guid: 38a07789c9e87004dad98c2909f58369, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIGroup.prefab
+    - Key: {fileID: 1302053982947836, guid: f7f5e36797cf0c1408561665c67b179b, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIHBox.prefab
+    - Key: {fileID: 1100371661045084, guid: ae00bb75e0cd5b04b8fe7fb4ab662629, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIIntField.prefab
+    - Key: {fileID: 1880654171993120, guid: 10a25524b0986f9488b430e2829bbbe8, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIMessageBox.prefab
+    - Key: {fileID: 1100371661045084, guid: a87cfaef648f17c41b568e842e068c51, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObject.prefab
+    - Key: {fileID: 1311110376158742, guid: ad83bc56407925d44a77a5bd01cd6783, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectList.prefab
+    - Key: {fileID: 4159203619694149602, guid: 48fb043c850cadc4a883b53785e14c6e, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectPopupField.prefab
+    - Key: {fileID: 1481385858290834, guid: daa46a58178a6ad41ae1ddc2dc7f856d, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIPanel.prefab
+    - Key: {fileID: 1100371661045084, guid: d3770aaa3bbd8384aabab9ddd383e21e, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIProgressBar.prefab
+    - Key: {fileID: 1880654171993120, guid: 2d019437ff89b8d44949727731cd9357, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIRow.prefab
+    - Key: {fileID: 1437325305121156, guid: ce347ad101f41ee4ab5c3fbc0ea447db, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggle.prefab
+    - Key: {fileID: 7797485299855706120, guid: 5088d0220f0c4df439cf06c5c270eacb, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggleHistory.prefab
+    - Key: {fileID: 1100371661045084, guid: f22bcc84a5f4a1944b075a2c4ac71493, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIUIntField.prefab
+    - Key: {fileID: 1100371661045084, guid: dc0f88987826e6e48b1fe9c7c2b53a53, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValue.prefab
+    - Key: {fileID: 1100371661045084, guid: 8778e6b26b51c6a4999b94d7cacd8b5d, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValuePersistent.prefab
+    - Key: {fileID: 1100371661045084, guid: a2148203dd960814ca5db0c293ceda35, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValueTuple.prefab
+    - Key: {fileID: 1932304026370548, guid: ca3e294656861a64b8aeeb9f916da0a9, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVBox.prefab
+    - Key: {fileID: 1824161537160572, guid: 326f7c58aed965d41bf7805a782d1e44, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector2.prefab
+    - Key: {fileID: 1477735892729942, guid: 94afea5f242d72547979595ba963f335, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector3.prefab
+    - Key: {fileID: 1803786589928054, guid: d47f009476100f545971a81ede14c750, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector4.prefab
+    - Key: {fileID: 919132149155446097, guid: 39857cfad1651644682ff5b772e6e697, type: 3}
+      Value: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/UnityMaterialBall.fbx
+    - Key: {fileID: 7918437720397152765, guid: cf30a5f67c570a544b4a378d2853c6f1, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/BodyTitleContentElement.prefab
+    - Key: {fileID: 4387796791817745772, guid: c7fedcf735aceb7409af04a4a2e88a6a, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/ContentElement.prefab
+    - Key: {fileID: 7647174366928024817, guid: d7cf3cb20981ddb4fba9215a72500342, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/MainBodyExtension.prefab
+    - Key: {fileID: 6308268119750500836, guid: a890431e34b61fd4fbec937509b0ae6e, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/ObjectiveContentElement.prefab
+    - Key: {fileID: 9193793702781515264, guid: 96dda1ee8a558f840999e4af5e617dcb, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/ScoringContentElement.prefab
+    - Key: {fileID: 388323136796710587, guid: 5125c1c132c55d94291b873fba9fca8f, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/ScrollButton.prefab
+    - Key: {fileID: 3186849711708048789, guid: 2d0128281c336a640a44338c93f13dcf, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/SessionOverview.prefab
+    - Key: {fileID: 7351949962191370175, guid: d6b912a571846fa4591b3d412fbbcb2b, type: 3}
+      Value: Packages/com.oramavr.mages.core/Analytics/Resources/TitleContentElement.prefab
+    - Key: {fileID: 7733799090598874198, guid: f4ff9cead58754bffbd94bdc6b65092b, type: 3}
+      Value: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileNavigation.prefab
+    - Key: {fileID: 5834230795456918307, guid: a2c281ebe21cd4e41b5ee30ff4bb7fff, type: 3}
+      Value: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileRig.prefab
+    - Key: {fileID: 5185069857149048624, guid: d02068aa5e554034f8ee413a3c3ed5bd, type: 3}
+      Value: Packages/com.oramavr.mages.core/DeviceManager/Resources/XRRig.prefab
+    - Key: {fileID: 7801955757403359275, guid: 0b03c6dea8dc357439ad62d0b37d260d, type: 3}
+      Value: Packages/com.oramavr.mages.core/Hub/Runtime/Resources/Style/Prefabs/ArrowGuide.prefab
+    - Key: {fileID: 919132149155446097, guid: 862ce524a4fbbd14987e130dc735c8a1, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Female.fbx
+    - Key: {fileID: 919132149155446097, guid: f4c1ccc729a2d9e428d399f99e5c26ee, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Male.fbx
+    - Key: {fileID: 919132149155446097, guid: f7e9450a29a5fb340a1518942a4dad47, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/hand.fbx
+    - Key: {fileID: 246808970771327733, guid: 26e855b489b0d5a4fb13b5e6e4204072, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar.prefab
+    - Key: {fileID: 1433642776545535712, guid: 0568731639bd6794394d62bf855b2475, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Female.prefab
+    - Key: {fileID: 1002568939988662636, guid: 13ad544f01600ed4289d6711cba4291a, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Male.prefab
+    - Key: {fileID: 720109609723301597, guid: 85240938ef152414fa3d68b15b5f4c84, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/DefaultReticle.prefab
+    - Key: {fileID: 3286612160006147312, guid: 51a4baae548b0464baa0f1129277aded, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorL.prefab
+    - Key: {fileID: 5573111655215791090, guid: 6950715d74b96464ba9ba0e1939eee0e, type: 3}
+      Value: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorR.prefab
+    - Key: {fileID: 9090289161377125936, guid: 255f0448210fda84cbdbf347f4550777, type: 3}
+      Value: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/MessageHandler.prefab
+    - Key: {fileID: 3250110519334526662, guid: 64d169f664cc19d43a87f462d0343a4d, type: 3}
+      Value: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkAvatar.prefab
+    - Key: {fileID: 2774466112161451010, guid: 6fac1962220690a45a5494c4680a5058, type: 3}
+      Value: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandL.prefab
+    - Key: {fileID: 8904235947335460686, guid: 9d9c010b6698b8a4d89ea0438f79612a, type: 3}
+      Value: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandR.prefab
+    - Key: {fileID: 5085592563082224075, guid: 1de0f6670354e314592d9f68727359f2, type: 3}
+      Value: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/Session
+        Progress UI.prefab
+    - Key: {fileID: 5477104182650870502, guid: 365cda6bd1bd5e440a07a6f0b3cc0ec5, type: 3}
+      Value: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/QuestionAction/QuestionTemplate.prefab
+    - Key: {fileID: 9051055463179047410, guid: 894fd0d4418d2084e89ab462937423e7, type: 3}
+      Value: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryLine.prefab
+    - Key: {fileID: 2810783484129916552, guid: f97856d8fee0dda45a8ca60bee2b06d4, type: 3}
+      Value: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryPoint.prefab
+    - Key: {fileID: 5731313045628312725, guid: 93d56042536e3fc42b2392d88f8f7209, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationButton.prefab
+    - Key: {fileID: 4577118681195390785, guid: 51d4022bde428704fa3ad9a6eaa68886, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationCanvas.prefab
+    - Key: {fileID: 1465634988327954177, guid: f967c1db58594074bbc07f808ccb4042, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NetworkingUI.prefab
+    - Key: {fileID: 4112277332220563739, guid: e7bf89b1973fcc4479424ebd4635d727, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/AchievementUI.prefab
+    - Key: {fileID: 2089214479290457458, guid: 63617e40730c649fb8e064ff8f6d281b, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/ErrorUI.prefab
+    - Key: {fileID: 996262205017023450, guid: a362ff994c646480689bf1e73d1a69ee, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/InfoUI.prefab
+    - Key: {fileID: 4077535924160438190, guid: f021b350e209448ff8eafe767fad46cc, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/WarningUI.prefab
+    - Key: {fileID: 99435099568227512, guid: 2174b4a09002b8e45b9fd60b498aa4d8, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationExit.prefab
+    - Key: {fileID: 4332255220682756392, guid: b83ffea56e3601a43b063028b26a0fde, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationStart.prefab
+    - Key: {fileID: 1407360974127994, guid: fa992b1aa12bab242b8246e1d4f98f00, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/SessionButton.prefab
+    - Key: {fileID: 1253271850973494504, guid: 69b0dcb302a3a3343a4521ddd3f05b5f, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICreateSession.prefab
+    - Key: {fileID: 1724806685168982, guid: 3bad0f2057b84c04a855152dae193135, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICriticalError.prefab
+    - Key: {fileID: 1300269420715686, guid: f833ffe1bb9e8914cb9de2b9e671a075, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIError.prefab
+    - Key: {fileID: 1621778157797948, guid: 4fc2bd3bd138710488e851c6fd70affb, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UINotification.prefab
+    - Key: {fileID: 1799453332104124, guid: 9488981a7a4c4ea4d8205c2c8032fd0d, type: 3}
+      Value: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIWarning.prefab
+    - Key: {fileID: 5843497292548984443, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
+      Value: Packages/com.unity.xr.legacyinputhelpers/Prefabs/XRRig.prefab
+  pathToGameObject:
+    serializedData:
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Cube.fbx
+      Value: {fileID: 919132149155446097, guid: 7639005907f4db049928463d76d6823d, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Sphere.fbx
+      Value: {fileID: 919132149155446097, guid: 9a891f5ba39d5b942bf516d8b3ee685b, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+      Value: {fileID: 908942595246231463, guid: a361a3293222e28499db2e161eeebd67, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+      Value: {fileID: 2860800430695251868, guid: accfd374445ee924bb22fbddb70cbca5, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+      Value: {fileID: 5789310592009211286, guid: 7c9b2ed83d7797e4e80c1c293c23f56b, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+      Value: {fileID: 6016984384870593031, guid: bae902c8f9b987d458c0e62bd4ac827c, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Cube.prefab
+      Value: {fileID: 3033575757623623128, guid: 3902a40383991d54fbc8143121103016, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/CharacterCustomizationCanvasEmpty.prefab
+      Value: {fileID: 6490112780918482942, guid: 8d48d0fb72b5be24a922b70bb90b01d0, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/NetworkingUIEmpty.prefab
+      Value: {fileID: 1465634988327954177, guid: 2e0f502d0e2c36c4b9ecbca762a814c8, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationExitEmpty.prefab
+      Value: {fileID: 695946910612231727, guid: 088eb5f6d86a41a4bb5e46f63be799a1, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationStartEmpty.prefab
+      Value: {fileID: 6427668898083739751, guid: a50d7aac7954fe04291489ffc6986adb, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/Session
+        Progress UI Empty Scene.prefab
+      Value: {fileID: 2775463711314371571, guid: ead8fc7302d200d49ba634994d26e0b6, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/SessionOverviewEmptyScene.prefab
+      Value: {fileID: 8482891306298584424, guid: 9db860b120b44c7419435384247047a0, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/UICreateSessionEmpty.prefab
+      Value: {fileID: 6186828216651065167, guid: fc13146416a0ba74caf5713ff7259826, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Sphere.prefab
+      Value: {fileID: 1712265545480742366, guid: 2f29532ddc09aa24db159404463bdebe, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholBottle/Alcohol_Bottle.fbx
+      Value: {fileID: 919132149155446097, guid: b1bbfa0dc812c4d499097b7a27ebfc6f, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholSpray/Alcohol_Spray.fbx
+      Value: {fileID: 919132149155446097, guid: b79456b1fb1947f43bcb2c418d790e2a, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball.fbx
+      Value: {fileID: 919132149155446097, guid: 04e6a83d04aa752468e30eb5ba96285e, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball_Grabbed.fbx
+      Value: {fileID: 919132149155446097, guid: 8361a23a08a53204e8ce95478d7251e5, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/HolographicArea/TeleportMarker.fbx
+      Value: {fileID: 919132149155446097, guid: c2ae6c92be4bc054e9f596ba2ccc512a, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/ORamaVR_Logo_Wall.prefab
+      Value: {fileID: 6293979293209514197, guid: 970b33ad8600c4649be04b135c85fdcd, type: 3}
+    - Key: "Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/\u039FRamaVR_Pictogram_Screen.prefab"
+      Value: {fileID: 4837517209671876475, guid: 5933741e7d5cb3c49a29e4af1e99771c, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/MedicineBottle/Medicine_Bottle.fbx
+      Value: {fileID: 919132149155446097, guid: 910095a07e8a2884c90fa2fedf4a885d, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.fbx
+      Value: {fileID: 919132149155446097, guid: 22504544baeba8c4d84b73db45459ef8, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.prefab
+      Value: {fileID: 7204250368189503839, guid: f742c40246c916248b2527348185f947, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/ReticleRotating/Recticle_rotating_01.FBX
+      Value: {fileID: 919132149155446097, guid: 6f272ee06d8525a46b5af979f2e5f90a, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Room/NXT_Room.fbx
+      Value: {fileID: 919132149155446097, guid: 0a1c3b302c1ce4f4b99f291ee21e4114, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Scalpel/Scalpel.FBX
+      Value: {fileID: 919132149155446097, guid: c5caf3921e332a8468ed999715c56e89, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/SkinBox/skin
+        box.fbx
+      Value: {fileID: 919132149155446097, guid: a775d2b87d6bb614caf0cf40a8ac96ae, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Syringe/Syringe.fbx
+      Value: {fileID: 919132149155446097, guid: a25a29f2773b3f445b45392566394677, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/TV/TV_stand.fbx
+      Value: {fileID: 919132149155446097, guid: f06941910241fd447b7076ca2bcaea99, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+      Value: {fileID: 1050945768559797074, guid: b2718303e696afb4a9b79fd28da2d2a8, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+      Value: {fileID: 3654972469150009679, guid: 11dfeed31a4cfb1478f61cc355963415, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+      Value: {fileID: 3500031255184576477, guid: 7125151d6ca14e741b4ff4ec16c08069, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+      Value: {fileID: 8674909012673925472, guid: 5211cafed657b7c48ac70017d8492fd2, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Bottle/Alcohol_Bottle.prefab
+      Value: {fileID: 4461789498622482572, guid: 214f32cebf2941a45be83ac5ea8160ef, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Spray/Alcohol_Spray.prefab
+      Value: {fileID: 2663334325131598747, guid: 128bc55980bc2644a97fe5bc205ea02e, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/BinArea/BinArea.prefab
+      Value: {fileID: 8151967033735030569, guid: b7c6043b6b1aa0d43ac7c3329ef5b890, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cotton_Ball/Cotton_Ball.prefab
+      Value: {fileID: 6811890992725081840, guid: 2d19969147df51a499fe3cd13ddb040b, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cupboards/HandPoses/Cupboard.prefab
+      Value: {fileID: 4675479889605947690, guid: f59dabde098374045b184073686ff8e6, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/DisinfectArea/DisinfectArmColldier.prefab
+      Value: {fileID: 5334127861141958002, guid: 668f16e2d3bf3d143a296dbd56bc6b76, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/CutLine.prefab
+      Value: {fileID: 8039857778618746083, guid: e1765c35a92cf464c9959d7ba1498552, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/Scalpel.prefab
+      Value: {fileID: 7833148477243739317, guid: 5f882da6271bad54784a066ead6e34e4, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FloorCollider.prefab
+      Value: {fileID: 3765945099689444981, guid: 5d363e2a0bab66f4584722d7efd02201, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/CharacterCustomizationCanvasMedical.prefab
+      Value: {fileID: 6126062374091248628, guid: ceac3ce2e2eb35745bfa7298cb49236a, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/NetworkingUIMedical.prefab
+      Value: {fileID: 1465634988327954177, guid: de8cbfc0f07b6ae4db412c13fbbe776a, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationExitMedical.prefab
+      Value: {fileID: 695946910612231727, guid: 80be6f865405a3c4ab211bd19c26cdd8, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationStartMedical.prefab
+      Value: {fileID: 8287548645498771471, guid: 212eb4c57a8af914c8c64d215ad64056, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/UICreateSessionMedical.prefab
+      Value: {fileID: 1061030109764770952, guid: 6b78343f46d576e44ae174a3c020e61e, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Medicine_Bottle/Medicine_Bottle.prefab
+      Value: {fileID: 4607341748483080585, guid: bd177487123c5e84bbb9c3df6e71421d, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeAdminister.prefab
+      Value: {fileID: 8919781291093236745, guid: 80a4e740ebf83d848a3e11920a919a1c, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeFinal.prefab
+      Value: {fileID: 8782387715358882742, guid: 6f9e4579a9c818346ae420b92a5061cf, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeInteractable.prefab
+      Value: {fileID: 4821283478671805728, guid: 435aa8ea7776f7d4fa1f9a9d9ab3f116, type: 3}
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/TV_Stand.prefab
+      Value: {fileID: 4044804350837727676, guid: ccc56b4a32cb1a94196d31d41638fd36, type: 3}
+    - Key: Assets/XRPlotLib/Discarded/ShaderPlot/Cube.prefab
+      Value: {fileID: 2861492543311580975, guid: ce98b33564b6da64796510ac46339ab3, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Datasets/Plane.prefab
+      Value: {fileID: 8204215609818438151, guid: 2e82544e9d86a29419f98cb564c9efaf, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/AxisValue.prefab
+      Value: {fileID: 1607707941550889129, guid: 5caaf1dae5d0171498f6f189be1a5812, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/BarDataPoint.prefab
+      Value: {fileID: 4910100258417797379, guid: 5b6b14a87240bec43a63394b2f31c4c6, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/ConnectedPlot.prefab
+      Value: {fileID: 4479308063162370676, guid: 2b611b6eae2fab645ac62000ddb3cdc9, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/DataPoint.prefab
+      Value: {fileID: 3987782063592244079, guid: 7c157ecb8de72a3468bf582d0785eece, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Edge.prefab
+      Value: {fileID: 8137864884402921353, guid: 9011023f8491c5442afd736d6934cdae, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Note.prefab
+      Value: {fileID: 7621417651331093014, guid: d3f3faa9b0a48c34eb386fff4ba23a2f, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/PrefabPlot.prefab
+      Value: {fileID: 3822750132580823082, guid: 48c6172d7222cd84da9ee95e428744fa, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Tooltip.prefab
+      Value: {fileID: 4508506026903379683, guid: 402c9c8366acc5042bd1030dff0fc5c7, type: 3}
+    - Key: Assets/XRPlotLib/Resources/Prefabs/UI Column Picker/Column.prefab
+      Value: {fileID: 1228747450885582403, guid: 383c5ee684b629b40bd8fb12a36928b9, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Editor/Resources/DebugProbe.fbx
+      Value: {fileID: 919132149155446097, guid: 9e1c97fc44f9a8744b61b58f72c56de4, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUICanvas.prefab
+      Value: {fileID: 1153602445894428, guid: cf6cbdd672089a84796e55a21fed1cbe, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUIPersistentCanvas.prefab
+      Value: {fileID: 1822588063230394, guid: f6b1a0fe75d5009449cf55ae76220e2b, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIBitField.prefab
+      Value: {fileID: 6048135192916836887, guid: 7c78b588b2e1f7c4a86ca4a985cf6e4a, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIButton.prefab
+      Value: {fileID: 1349998662384948, guid: f6ce33b91f6ffe54cadacbf4bb112440, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIColor.prefab
+      Value: {fileID: 1213106801707016, guid: 77c185820dd1a464eac89cae3abccddf, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumField.prefab
+      Value: {fileID: 1311110376158742, guid: 988db55689193434fb0b3b89538f978f, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumHistory.prefab
+      Value: {fileID: 3734445388003485314, guid: b2da6b27df236b144b3516ed8e7d36ac, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFloatField.prefab
+      Value: {fileID: 1100371661045084, guid: d8c744701b43c864b88e7f8144e19bc5, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFoldout.prefab
+      Value: {fileID: 1880654171993120, guid: 1c87ab2ce8b8b304d98fbe9a734b1f74, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIGroup.prefab
+      Value: {fileID: 1674137683461036, guid: 38a07789c9e87004dad98c2909f58369, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIHBox.prefab
+      Value: {fileID: 1302053982947836, guid: f7f5e36797cf0c1408561665c67b179b, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIIntField.prefab
+      Value: {fileID: 1100371661045084, guid: ae00bb75e0cd5b04b8fe7fb4ab662629, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIMessageBox.prefab
+      Value: {fileID: 1880654171993120, guid: 10a25524b0986f9488b430e2829bbbe8, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObject.prefab
+      Value: {fileID: 1100371661045084, guid: a87cfaef648f17c41b568e842e068c51, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectList.prefab
+      Value: {fileID: 1311110376158742, guid: ad83bc56407925d44a77a5bd01cd6783, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectPopupField.prefab
+      Value: {fileID: 4159203619694149602, guid: 48fb043c850cadc4a883b53785e14c6e, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIPanel.prefab
+      Value: {fileID: 1481385858290834, guid: daa46a58178a6ad41ae1ddc2dc7f856d, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIProgressBar.prefab
+      Value: {fileID: 1100371661045084, guid: d3770aaa3bbd8384aabab9ddd383e21e, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIRow.prefab
+      Value: {fileID: 1880654171993120, guid: 2d019437ff89b8d44949727731cd9357, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggle.prefab
+      Value: {fileID: 1437325305121156, guid: ce347ad101f41ee4ab5c3fbc0ea447db, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggleHistory.prefab
+      Value: {fileID: 7797485299855706120, guid: 5088d0220f0c4df439cf06c5c270eacb, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIUIntField.prefab
+      Value: {fileID: 1100371661045084, guid: f22bcc84a5f4a1944b075a2c4ac71493, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValue.prefab
+      Value: {fileID: 1100371661045084, guid: dc0f88987826e6e48b1fe9c7c2b53a53, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValuePersistent.prefab
+      Value: {fileID: 1100371661045084, guid: 8778e6b26b51c6a4999b94d7cacd8b5d, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValueTuple.prefab
+      Value: {fileID: 1100371661045084, guid: a2148203dd960814ca5db0c293ceda35, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVBox.prefab
+      Value: {fileID: 1932304026370548, guid: ca3e294656861a64b8aeeb9f916da0a9, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector2.prefab
+      Value: {fileID: 1824161537160572, guid: 326f7c58aed965d41bf7805a782d1e44, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector3.prefab
+      Value: {fileID: 1477735892729942, guid: 94afea5f242d72547979595ba963f335, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector4.prefab
+      Value: {fileID: 1803786589928054, guid: d47f009476100f545971a81ede14c750, type: 3}
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/UnityMaterialBall.fbx
+      Value: {fileID: 919132149155446097, guid: 39857cfad1651644682ff5b772e6e697, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/BodyTitleContentElement.prefab
+      Value: {fileID: 7918437720397152765, guid: cf30a5f67c570a544b4a378d2853c6f1, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ContentElement.prefab
+      Value: {fileID: 4387796791817745772, guid: c7fedcf735aceb7409af04a4a2e88a6a, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/MainBodyExtension.prefab
+      Value: {fileID: 7647174366928024817, guid: d7cf3cb20981ddb4fba9215a72500342, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ObjectiveContentElement.prefab
+      Value: {fileID: 6308268119750500836, guid: a890431e34b61fd4fbec937509b0ae6e, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ScoringContentElement.prefab
+      Value: {fileID: 9193793702781515264, guid: 96dda1ee8a558f840999e4af5e617dcb, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ScrollButton.prefab
+      Value: {fileID: 388323136796710587, guid: 5125c1c132c55d94291b873fba9fca8f, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/SessionOverview.prefab
+      Value: {fileID: 3186849711708048789, guid: 2d0128281c336a640a44338c93f13dcf, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/TitleContentElement.prefab
+      Value: {fileID: 7351949962191370175, guid: d6b912a571846fa4591b3d412fbbcb2b, type: 3}
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileNavigation.prefab
+      Value: {fileID: 7733799090598874198, guid: f4ff9cead58754bffbd94bdc6b65092b, type: 3}
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileRig.prefab
+      Value: {fileID: 5834230795456918307, guid: a2c281ebe21cd4e41b5ee30ff4bb7fff, type: 3}
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/XRRig.prefab
+      Value: {fileID: 5185069857149048624, guid: d02068aa5e554034f8ee413a3c3ed5bd, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Hub/Runtime/Resources/Style/Prefabs/ArrowGuide.prefab
+      Value: {fileID: 7801955757403359275, guid: 0b03c6dea8dc357439ad62d0b37d260d, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Female.fbx
+      Value: {fileID: 919132149155446097, guid: 862ce524a4fbbd14987e130dc735c8a1, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Male.fbx
+      Value: {fileID: 919132149155446097, guid: f4c1ccc729a2d9e428d399f99e5c26ee, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/hand.fbx
+      Value: {fileID: 919132149155446097, guid: f7e9450a29a5fb340a1518942a4dad47, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar.prefab
+      Value: {fileID: 246808970771327733, guid: 26e855b489b0d5a4fb13b5e6e4204072, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Female.prefab
+      Value: {fileID: 1433642776545535712, guid: 0568731639bd6794394d62bf855b2475, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Male.prefab
+      Value: {fileID: 1002568939988662636, guid: 13ad544f01600ed4289d6711cba4291a, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/DefaultReticle.prefab
+      Value: {fileID: 720109609723301597, guid: 85240938ef152414fa3d68b15b5f4c84, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorL.prefab
+      Value: {fileID: 3286612160006147312, guid: 51a4baae548b0464baa0f1129277aded, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorR.prefab
+      Value: {fileID: 5573111655215791090, guid: 6950715d74b96464ba9ba0e1939eee0e, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/MessageHandler.prefab
+      Value: {fileID: 9090289161377125936, guid: 255f0448210fda84cbdbf347f4550777, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkAvatar.prefab
+      Value: {fileID: 3250110519334526662, guid: 64d169f664cc19d43a87f462d0343a4d, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandL.prefab
+      Value: {fileID: 2774466112161451010, guid: 6fac1962220690a45a5494c4680a5058, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandR.prefab
+      Value: {fileID: 8904235947335460686, guid: 9d9c010b6698b8a4d89ea0438f79612a, type: 3}
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/Session Progress
+        UI.prefab
+      Value: {fileID: 5085592563082224075, guid: 1de0f6670354e314592d9f68727359f2, type: 3}
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/QuestionAction/QuestionTemplate.prefab
+      Value: {fileID: 5477104182650870502, guid: 365cda6bd1bd5e440a07a6f0b3cc0ec5, type: 3}
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryLine.prefab
+      Value: {fileID: 9051055463179047410, guid: 894fd0d4418d2084e89ab462937423e7, type: 3}
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryPoint.prefab
+      Value: {fileID: 2810783484129916552, guid: f97856d8fee0dda45a8ca60bee2b06d4, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationButton.prefab
+      Value: {fileID: 5731313045628312725, guid: 93d56042536e3fc42b2392d88f8f7209, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationCanvas.prefab
+      Value: {fileID: 4577118681195390785, guid: 51d4022bde428704fa3ad9a6eaa68886, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NetworkingUI.prefab
+      Value: {fileID: 1465634988327954177, guid: f967c1db58594074bbc07f808ccb4042, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/AchievementUI.prefab
+      Value: {fileID: 4112277332220563739, guid: e7bf89b1973fcc4479424ebd4635d727, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/ErrorUI.prefab
+      Value: {fileID: 2089214479290457458, guid: 63617e40730c649fb8e064ff8f6d281b, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/InfoUI.prefab
+      Value: {fileID: 996262205017023450, guid: a362ff994c646480689bf1e73d1a69ee, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/WarningUI.prefab
+      Value: {fileID: 4077535924160438190, guid: f021b350e209448ff8eafe767fad46cc, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationExit.prefab
+      Value: {fileID: 99435099568227512, guid: 2174b4a09002b8e45b9fd60b498aa4d8, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationStart.prefab
+      Value: {fileID: 4332255220682756392, guid: b83ffea56e3601a43b063028b26a0fde, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/SessionButton.prefab
+      Value: {fileID: 1407360974127994, guid: fa992b1aa12bab242b8246e1d4f98f00, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICreateSession.prefab
+      Value: {fileID: 1253271850973494504, guid: 69b0dcb302a3a3343a4521ddd3f05b5f, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICriticalError.prefab
+      Value: {fileID: 1724806685168982, guid: 3bad0f2057b84c04a855152dae193135, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIError.prefab
+      Value: {fileID: 1300269420715686, guid: f833ffe1bb9e8914cb9de2b9e671a075, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UINotification.prefab
+      Value: {fileID: 1621778157797948, guid: 4fc2bd3bd138710488e851c6fd70affb, type: 3}
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIWarning.prefab
+      Value: {fileID: 1799453332104124, guid: 9488981a7a4c4ea4d8205c2c8032fd0d, type: 3}
+    - Key: Packages/com.unity.xr.legacyinputhelpers/Prefabs/XRRig.prefab
+      Value: {fileID: 5843497292548984443, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
+  pathToPrefabID:
+    serializedData:
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Cube.fbx
+      Value: 44730
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Models/Sphere.fbx
+      Value: 44742
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+      Value: 30300
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+      Value: 30298
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+      Value: 30294
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+      Value: 30296
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Cube.prefab
+      Value: 35094
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/CharacterCustomizationCanvasEmpty.prefab
+      Value: 30804
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/NetworkingUIEmpty.prefab
+      Value: 30802
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationExitEmpty.prefab
+      Value: 30626
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/OperationStartEmpty.prefab
+      Value: 30304
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/Session
+        Progress UI Empty Scene.prefab
+      Value: 30302
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/SessionOverviewEmptyScene.prefab
+      Value: 30284
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/General/UICreateSessionEmpty.prefab
+      Value: 31684
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Empty Scene/Resources/Prefabs/Sphere.prefab
+      Value: 35096
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholBottle/Alcohol_Bottle.fbx
+      Value: 41964
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/AlcoholSpray/Alcohol_Spray.fbx
+      Value: 44770
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball.fbx
+      Value: 44802
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/CottonBall/Cotton_Ball_Grabbed.fbx
+      Value: 44812
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/HolographicArea/TeleportMarker.fbx
+      Value: 37140
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/ORamaVR_Logo_Wall.prefab
+      Value: 44822
+    - Key: "Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Logos/\u039FRamaVR_Pictogram_Screen.prefab"
+      Value: 44834
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/MedicineBottle/Medicine_Bottle.fbx
+      Value: 44846
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.fbx
+      Value: 41970
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Patient/Patient.prefab
+      Value: 44868
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/ReticleRotating/Recticle_rotating_01.FBX
+      Value: 41936
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Room/NXT_Room.fbx
+      Value: 45204
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Scalpel/Scalpel.FBX
+      Value: 36298
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/SkinBox/skin
+        box.fbx
+      Value: 41950
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/Syringe/Syringe.fbx
+      Value: 45464
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Models/TV/TV_stand.fbx
+      Value: 45494
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/MessageHandler
+        Variant.prefab
+      Value: 35596
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkAvatar
+        Variant.prefab
+      Value: 35590
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandL
+        Variant.prefab
+      Value: 35594
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Networking/NetworkHandR
+        Variant.prefab
+      Value: 35606
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Bottle/Alcohol_Bottle.prefab
+      Value: 35584
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Alcohol_Spray/Alcohol_Spray.prefab
+      Value: 35586
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/BinArea/BinArea.prefab
+      Value: 35592
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cotton_Ball/Cotton_Ball.prefab
+      Value: 35574
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Cupboards/HandPoses/Cupboard.prefab
+      Value: 35578
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/DisinfectArea/DisinfectArmColldier.prefab
+      Value: 35588
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/CutLine.prefab
+      Value: 35612
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FakeSkinIncision/Scalpel.prefab
+      Value: 35600
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/FloorCollider.prefab
+      Value: 35568
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/CharacterCustomizationCanvasMedical.prefab
+      Value: 35608
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/NetworkingUIMedical.prefab
+      Value: 35598
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationExitMedical.prefab
+      Value: 35572
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/OperationStartMedical.prefab
+      Value: 35610
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/General/UICreateSessionMedical.prefab
+      Value: 35582
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Medicine_Bottle/Medicine_Bottle.prefab
+      Value: 35570
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeAdminister.prefab
+      Value: 35576
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeFinal.prefab
+      Value: 35602
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/Syringe/SyringeInteractable.prefab
+      Value: 35604
+    - Key: Assets/Samples/MAGES SDK - Core/5.0.2/Example Scene/Resources/Prefabs/TV_Stand.prefab
+      Value: 35580
+    - Key: Assets/XRPlotLib/Discarded/ShaderPlot/Cube.prefab
+      Value: 45756
+    - Key: Assets/XRPlotLib/Resources/Datasets/Plane.prefab
+      Value: 35534
+    - Key: Assets/XRPlotLib/Resources/Prefabs/AxisValue.prefab
+      Value: 34628
+    - Key: Assets/XRPlotLib/Resources/Prefabs/BarDataPoint.prefab
+      Value: 35560
+    - Key: Assets/XRPlotLib/Resources/Prefabs/ConnectedPlot.prefab
+      Value: 35510
+    - Key: Assets/XRPlotLib/Resources/Prefabs/DataPoint.prefab
+      Value: 34630
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Edge.prefab
+      Value: 35514
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Note.prefab
+      Value: 35564
+    - Key: Assets/XRPlotLib/Resources/Prefabs/PrefabPlot.prefab
+      Value: 30242
+    - Key: Assets/XRPlotLib/Resources/Prefabs/Tooltip.prefab
+      Value: 34736
+    - Key: Assets/XRPlotLib/Resources/Prefabs/UI Column Picker/Column.prefab
+      Value: 35526
+    - Key: Packages/com.unity.render-pipelines.core/Editor/Resources/DebugProbe.fbx
+      Value: 35342
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUICanvas.prefab
+      Value: 35500
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Resources/DebugUIPersistentCanvas.prefab
+      Value: 35502
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIBitField.prefab
+      Value: 46540
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIButton.prefab
+      Value: 46478
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIColor.prefab
+      Value: 46492
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumField.prefab
+      Value: 46470
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIEnumHistory.prefab
+      Value: 46556
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFloatField.prefab
+      Value: 46462
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIFoldout.prefab
+      Value: 46484
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIGroup.prefab
+      Value: 46532
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIHBox.prefab
+      Value: 46528
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIIntField.prefab
+      Value: 46446
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIMessageBox.prefab
+      Value: 46572
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObject.prefab
+      Value: 46594
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectList.prefab
+      Value: 46602
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIObjectPopupField.prefab
+      Value: 46610
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIPanel.prefab
+      Value: 46420
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIProgressBar.prefab
+      Value: 46578
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIRow.prefab
+      Value: 46564
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggle.prefab
+      Value: 46438
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIToggleHistory.prefab
+      Value: 46548
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIUIntField.prefab
+      Value: 46454
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValue.prefab
+      Value: 46430
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValuePersistent.prefab
+      Value: 49078
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIValueTuple.prefab
+      Value: 46586
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVBox.prefab
+      Value: 46524
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector2.prefab
+      Value: 46500
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector3.prefab
+      Value: 46508
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUIVector4.prefab
+      Value: 46516
+    - Key: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/UnityMaterialBall.fbx
+      Value: 49106
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/BodyTitleContentElement.prefab
+      Value: 35086
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ContentElement.prefab
+      Value: 35090
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/MainBodyExtension.prefab
+      Value: 30742
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ObjectiveContentElement.prefab
+      Value: 35088
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ScoringContentElement.prefab
+      Value: 35092
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/ScrollButton.prefab
+      Value: 35082
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/SessionOverview.prefab
+      Value: 35080
+    - Key: Packages/com.oramavr.mages.core/Analytics/Resources/TitleContentElement.prefab
+      Value: 35084
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileNavigation.prefab
+      Value: 35780
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/MobileRig.prefab
+      Value: 35782
+    - Key: Packages/com.oramavr.mages.core/DeviceManager/Resources/XRRig.prefab
+      Value: 35764
+    - Key: Packages/com.oramavr.mages.core/Hub/Runtime/Resources/Style/Prefabs/ArrowGuide.prefab
+      Value: 35076
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Female.fbx
+      Value: 41958
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/Avatars/Avatar_Male.fbx
+      Value: 41944
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Models/hand.fbx
+      Value: 41940
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar.prefab
+      Value: 30290
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Female.prefab
+      Value: 30974
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/Avatars/Avatar_Male.prefab
+      Value: 30956
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/DefaultReticle.prefab
+      Value: 30292
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorL.prefab
+      Value: 30286
+    - Key: Packages/com.oramavr.mages.core/Interaction/Runtime/Resources/Prefabs/HandInteractorR.prefab
+      Value: 30288
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/MessageHandler.prefab
+      Value: 30414
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkAvatar.prefab
+      Value: 30402
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandL.prefab
+      Value: 30378
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/NetworkHandR.prefab
+      Value: 30390
+    - Key: Packages/com.oramavr.mages.core/Networking/Runtime/Resources/Session Progress
+        UI.prefab
+      Value: 35474
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/QuestionAction/QuestionTemplate.prefab
+      Value: 35792
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryLine.prefab
+      Value: 35790
+    - Key: Packages/com.oramavr.mages.core/SceneGraph/Runtime/Resources/ActionPatterns/TrajectoryAction/TrajectoryPoint.prefab
+      Value: 35788
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationButton.prefab
+      Value: 35404
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/CharacterCustomizationCanvas.prefab
+      Value: 35350
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NetworkingUI.prefab
+      Value: 35434
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/AchievementUI.prefab
+      Value: 30282
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/ErrorUI.prefab
+      Value: 30280
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/InfoUI.prefab
+      Value: 30276
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/NotificationUIs/WarningUI.prefab
+      Value: 30278
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationExit.prefab
+      Value: 35436
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/OperationStart.prefab
+      Value: 35442
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/SessionButton.prefab
+      Value: 35410
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICreateSession.prefab
+      Value: 35430
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UICriticalError.prefab
+      Value: 35432
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIError.prefab
+      Value: 35416
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UINotification.prefab
+      Value: 35382
+    - Key: Packages/com.oramavr.mages.core/UIs/Resources/Prefabs/UIWarning.prefab
+      Value: 35444
+    - Key: Packages/com.unity.xr.legacyinputhelpers/Prefabs/XRRig.prefab
+      Value: 51634

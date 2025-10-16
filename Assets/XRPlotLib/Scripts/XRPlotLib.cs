@@ -217,37 +217,46 @@ namespace MAGES.XRPlotLib
 
         public void FitDataToViewport()
         {
-            float xMax, xMin, yMax, yMin, zMax, zMin;
-            xMax = dataSet.GetMaxValue(Axis.X, positionDimensions);
-            yMax = dataSet.GetMaxValue(Axis.Y, positionDimensions);
-            zMax = dataSet.GetMaxValue(Axis.Z, positionDimensions);
+            // Get the min and max values for each axis.
+            float xMin = dataSet.GetMinValue(Axis.X, positionDimensions);
+            float xMax = dataSet.GetMaxValue(Axis.X, positionDimensions);
+            float yMin = dataSet.GetMinValue(Axis.Y, positionDimensions);
+            float yMax = dataSet.GetMaxValue(Axis.Y, positionDimensions);
+            float zMin = dataSet.GetMinValue(Axis.Z, positionDimensions);
+            float zMax = dataSet.GetMaxValue(Axis.Z, positionDimensions);
 
-            xMin = dataSet.GetMinValue(Axis.X, positionDimensions);
-            yMin = dataSet.GetMinValue(Axis.Y, positionDimensions);
-            zMin = dataSet.GetMinValue(Axis.Z, positionDimensions);
+            // Compute the range for each axis.
+            float xRange = xMax - xMin;
+            float yRange = yMax - yMin;
+            float zRange = zMax - zMin;
 
-            float xLen, yLen, zLen;
+            // Get the current dimensions of the plot area.
+            float plotWidth = plotArea.transform.localScale.x;
+            float plotHeight = plotArea.transform.localScale.y;
+            float plotDepth = plotArea.transform.localScale.z;
 
-            xLen = Math.Abs(xMax) + Math.Abs(xMin);
-            yLen = Math.Abs(yMax) + Math.Abs(yMin);
-            zLen = Math.Abs(zMax) + Math.Abs(zMin);
+            // Calculate separate scale factors (using 90% of each available dimension).
+            float xScale = (0.9f * plotWidth) / xRange;
+            float yScale = (0.9f * plotHeight) / yRange;
+            float zScale = (0.9f * plotDepth) / zRange;
 
-            float maxLen = Mathf.Max(xLen, yLen, zLen);
+            // Apply non-uniform scaling.
+            plotData.transform.localScale = new Vector3(xScale, yScale, zScale);
 
-            float currShortestAxis = Mathf.Min(
-                plotArea.transform.localScale.x,
-                plotArea.transform.localScale.y,
-                plotArea.transform.localScale.z);
+            // Calculate the center of your data.
+            float xCenter = (xMin + xMax) / 2f;
+            float yCenter = (yMin + yMax) / 2f;
+            float zCenter = (zMin + zMax) / 2f;
 
-            float scale = (1 / maxLen) * 0.9f * currShortestAxis;
+            // Calculate offsets so the data is centered in the plot area.
+            float xOffset = -xCenter * xScale + (plotWidth / 2f);
+            float yOffset = -yCenter * yScale + (plotHeight / 2f);
+            float zOffset = -zCenter * zScale + (plotDepth / 2f);
 
-            plotData.transform.localScale = new Vector3(scale, scale, scale);
-
-            plotData.transform.localPosition = new Vector3(
-                GetRatio(xMin, xMax, currShortestAxis),
-                GetRatio(yMin, yMax, currShortestAxis),
-                GetRatio(zMin, zMax, currShortestAxis));
+            plotData.transform.localPosition = new Vector3(xOffset, yOffset, zOffset);
         }
+
+
 
         private float GetRatio(float a, float b, float currShortestAxis)
         {

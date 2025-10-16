@@ -1,0 +1,41 @@
+{
+  "name": "com.oramavr.mages.core",
+  "version": "5.0.2",
+  "displayName": "MAGES SDK - Core",
+  "description": "MAGES\u2122 SDK is a powerful asset that lets you create immersive XR simulations like never before. Whether you\u2019re a seasoned developer or a newcomer, unlock the full potential of virtual medical training. Elevate your simulations, amplify engagement, and redefine the future of medical education with MAGES SDK.",
+  "unity": "2022.2",
+  "documentationUrl": "https://mages-docs.oramavr.com/",
+  "changelogUrl": "https://mages-docs.oramavr.com/en/latest/release_notes/index.html",
+  "licensesUrl": "https://oramavr.com/eula/ORamaVR_SDK_Licence_EULA.pdf",
+  "dependencies": {
+    "com.unity.inputsystem": "1.5.1",
+    "com.unity.nuget.newtonsoft-json": "3.0.1",
+    "com.unity.splines": "2.4.0",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.textmeshpro": "3.0.7"
+  },
+  "keywords": [
+    "XR Development",
+	"Medical Training",
+	"XR Content Creation",
+	"Networked XR",
+	"AI-assisted Development"
+  ],
+  "author": {
+    "name": "ORamaVR SA Group",
+    "email": "support@oramavr.com",
+    "url": "https://www.oramavr.com"
+  },
+  "samples": [
+    {
+      "displayName": "Empty Scene",
+      "description": "An empty pre-configured scene to make starting a new project with the MAGES NXT SDK as fast as possible.",
+      "path": "Samples~/EmptyScene"
+    },
+    {
+      "displayName": "Example Scene",
+      "description": "A simple room showcasing most important features of the MAGES NXT SDK.",
+      "path": "Samples~/ExampleScene"
+    }
+  ]
+}

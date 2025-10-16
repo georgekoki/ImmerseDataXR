@@ -1,0 +1,2051 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Analytics.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Analytics.ActionRecord">
+            <summary>
+            Class that represents the tracked data of an action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ActionRecord.Name">
+            <summary>
+            Gets or sets name of action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ActionRecord.BeginTime">
+            <summary>
+            Gets or sets the time the action started.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ActionRecord.EndTime">
+            <summary>
+            Gets or sets the time the action ended.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ActionRecord.Skipped">
+            <summary>
+            Gets or sets a value indicating whether the action was skipped.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ActionRecord.ActiveActions">
+            <summary>
+            Gets or sets the currently active actions.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsLogger">
+            <summary>
+            The class that is used for logging analytics.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsLogger.Enable">
+            <summary>
+            Gets or sets a value indicating whether the logger is enabled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsLogger.Initialize(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes the logger.
+            </summary>
+            <param name="enabled"> A values indicating if the logger will be enabled. </param>
+            <param name="fileSave"> A value indicating if the logger will output to the console or to a file. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsLogger.ShutDown">
+            <summary>
+            Shuts down the logger.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsLogger.Trace(System.String)">
+            <summary>
+            Log a trace message.
+            </summary>
+            <param name="message"> The log message. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsLogger.Info(System.String)">
+            <summary>
+            Log an info message.
+            </summary>
+            <param name="message"> The log message. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsLogger.Error(System.String)">
+            <summary>
+            Log an error message.
+            </summary>
+            <param name="message"> The log message. </param>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsManagedObject">
+            <summary>
+            An object that is managed by the analytics for collision and transform detection purposes.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.MovementThreshold">
+            <summary>
+            Gets or sets the movement threshold for registering movements for the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.RotationThreshold">
+            <summary>
+            Gets or sets the rotation threshold for registering rotations for the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.ReferenceCount">
+            <summary>
+            Gets or sets the reference counter for the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.Track">
+            <summary>
+            Gets or sets a value indicating whether this gameobject will be tracked or not.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.CollisionEntered">
+            <summary>
+            Gets or sets the event that gets called on collision enter.
+            First arg is the other gameobjects name and the second is the a list with the currenlty active action names.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.CollisionExited">
+            <summary>
+            Gets or sets the event that gets called on collision exit.
+            First arg is the other gameobjects name and the second is the a list with the currenlty active action names.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.PositionChanged">
+            <summary>
+            Gets or sets the event that gets called when position has changed.
+            First arg is the gameobjects name and the second is the a list with the currenlty active action names.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.RotationChanged">
+            <summary>
+            Gets or sets the event that gets called when rotation has changed.
+            First arg is the gameobjects name and the second is the a list with the currenlty active action names.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsManagedObject.FrameUpdated">
+            <summary>
+            Gets or sets the event that gets called every frame.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsScriptableObject">
+            <summary>
+            Scriptable object that stores per action analytics.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.ActionsScore">
+            <summary>
+            Gets or sets the action score.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.AllObjects">
+            <summary>
+            Gets or sets the disctionary holding all the analytics objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.TimeLimitObjects">
+            <summary>
+            Gets or sets the disctionary holding all the TimeLimit objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.ScoreLimitObjects">
+            <summary>
+            Gets or sets the disctionary holding all the ScoreLimit objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.ErrorColliderObjects">
+            <summary>
+            Gets or sets the disctionary holding all the ErrorCollider objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.InteractionRestrictionObjects">
+            <summary>
+            Gets or sets the disctionary holding all the InteractionRestriction objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.RotationRestrictionObjects">
+            <summary>
+            Gets or sets the disctionary holding all the RotationRestriction objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.RangeOfMotionLimitObjects">
+            <summary>
+            Gets or sets the disctionary holding all the RangeOfMotionLimit objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.ErrorAngleObjects">
+            <summary>
+            Gets or sets the disctionary holding all the ErrorAngle objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.PerformedWrongActionObjects">
+            <summary>
+            Gets or sets the disctionary holding all the PerformedWrongAction objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.DidNotPerformRequiredActionObjects">
+            <summary>
+            Gets or sets the disctionary holding all the DidNotPerformRequiredAction objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.CustomTypeObjects">
+            <summary>
+            Gets or sets the disctionary holding all the DidNotPerformRequiredAction objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsScriptableObject.WrongAnswerObjects">
+            <summary>
+            Gets or sets the disctionary holding all the WrongAnswer objects.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsScriptableObject.GetDictionaryKeys(System.String)">
+            <summary>
+            Return the size of the dictionary of the given internal type.
+            </summary>
+            <param name="name"> The name of dictionary internal type. </param>
+            <returns> The size of the dictionary of the given internal type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsScriptableObject.GetDictionaryCount(System.String)">
+            <summary>
+            Return the size of the dictionary of the given internal type.
+            </summary>
+            <param name="name"> The name of dictionary internal type. </param>
+            <returns> The size of the dictionary of the given internal type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsScriptableObject.Invalidate(MAGES.Analytics.AnalyticsTypes.BaseType)">
+            <summary>
+            Invalidates the given analytics object with new values.
+            </summary>
+            <param name="baseEvent"> The analytics object to invalidate. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsScriptableObject.Delete(MAGES.Analytics.AnalyticsTypes.BaseType)">
+            <summary>
+            Deletes the given analytics object.
+            </summary>
+            <param name="baseEvent"> The analytics object to be deleted. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsScriptableObject.Rename(MAGES.Analytics.AnalyticsTypes.BaseType,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Renames an analytics object of specific name and type.
+            </summary>
+            <param name="baseEvent"> The analytics object to be renamed. </param>
+            <param name="oldName"> The current name of the analytics object. </param>
+            <param name="newName"> The new name of the analytics object. </param>
+            <param name="type"> The type of the analytics object(Error or Objective). </param>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes">
+            <summary>
+            The class containing all the available analytics types used in errors and in objectives.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.Type">
+            <summary>
+            The types of an analytics object.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Type.Error">
+            <summary>
+            The analytics type for the errors.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Type.Objective">
+            <summary>
+            The analytics type for the objectives.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Type.None">
+            <summary>
+            None type for error handling.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.Category">
+            <summary>
+            The categories of analytics types.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Category.ErrorOnly">
+            <summary>
+            The category that contains all the analytics types that appear in errors only.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Category.ErrorOnlyActionSpecific">
+            <summary>
+            The category that contains all the analytics types that appear in errors only and they are action specific.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Category.ObjectiveOnly">
+            <summary>
+            The category that contains all the analytics types that appear in objectives only.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Category.Both">
+            <summary>
+            The category that contains all the analytics types that appear in both types.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsTypes.Category.None">
+            <summary>
+            None type for error handling.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.BaseType">
+            <summary>
+            Base class for all analytics types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.BaseType.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.BaseType"/> class.
+            </summary>
+            <param name="name"> The base type entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Type">
+            <summary>
+            Gets or sets the type of the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.InternalType">
+            <summary>
+            Gets or sets the type name of the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.InternalTypeUI">
+            <summary>
+            Gets or sets the type name of the analytics object UI.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Category">
+            <summary>
+            Gets or sets the category of the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Name">
+            <summary>
+            Gets or sets the name of the analytics type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Label">
+            <summary>
+            Gets or sets the label of the analytics type that is visible to the editor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Info">
+            <summary>
+            Gets or sets the info of the analytics type, either a description for an objective, or a message when an error happens.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.Penalty">
+            <summary>
+            Gets or sets the penalty of the error.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.BaseType.TypeOfError">
+            <summary>
+            Gets or sets the type of the error.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.ErrorCollider">
+            <summary>
+            Class for the analytics type that triggers when a gameobject collides with a collider.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.ErrorCollider.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.ErrorCollider"/> class.
+            </summary>
+            <param name="name"> The Error Collider entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorCollider.CollisionType">
+            <summary>
+            Gets or sets the type of the collision.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorCollider.Prefab">
+            <summary>
+            Gets or sets the main prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorCollider.Collider">
+            <summary>
+            Gets or sets the collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorCollider.Action">
+            <summary>
+            Gets or sets the actions that the collision error will be applied to.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.TimeLimit">
+            <summary>
+            Class for the analytics type that triggers when an action / the entire operation running time in seconds is more / less than a specified value.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.TimeLimit.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.TimeLimit"/> class.
+            </summary>
+            <param name="name"> The Time Limit entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.TimeLimit.Time">
+            <summary>
+            Gets or sets the time limit for the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.TimeLimit.Action">
+            <summary>
+            Gets or sets the actions that the time limit will be applied to.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.TimeLimit.Bound">
+            <summary>
+            Gets or sets the time limits' bound(upper or lower).
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.ScoreLimit">
+            <summary>
+            Class for the analytics type that triggers when an action / entire operation has less score than a specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.ScoreLimit.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.ScoreLimit"/> class.
+            </summary>
+            <param name="name"> The time limit entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ScoreLimit.Score">
+            <summary>
+            Gets or sets the score limit for the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ScoreLimit.Action">
+            <summary>
+            Gets or sets the actions that the time limit will be applied to.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.RotationRestriction">
+            <summary>
+            Class for the analytics type that triggers when a gameobject surpasses a specified rotation limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.RotationRestriction.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.RotationRestriction"/> class.
+            </summary>
+            <param name="name"> The Rotation Restriction entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RotationRestriction.TargetPrefab">
+            <summary>
+            Gets or sets the target prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RotationRestriction.MaxRotation">
+            <summary>
+            Gets or sets the max rotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RotationRestriction.Threshold">
+            <summary>
+            Gets or sets the threshold for registering rotations.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RotationRestriction.Action">
+            <summary>
+            Gets or sets the actions that the rotation limit will be active.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit">
+            <summary>
+            Class for the analytics type that triggers when a gameobject is moved(in aggregate) more than a specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit"/> class.
+            </summary>
+            <param name="name"> The Range Of Motion Limit entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit.TargetPrefab">
+            <summary>
+            Gets or sets the target prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit.MaxDistance">
+            <summary>
+            Gets or sets the max rotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit.Threshold">
+            <summary>
+            Gets or sets the threshold for registering movement.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.RangeOfMotionLimit.Action">
+            <summary>
+            Gets or sets the actions that the range of motion limit will be active.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.InteractionRestriction">
+            <summary>
+            Class for the analytics type that triggers when a interactable interacts with an interactor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.InteractionRestriction.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.InteractionRestriction"/> class.
+            </summary>
+            <param name="name"> The Interaction Restriction entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.InteractionRestriction.Interactable">
+            <summary>
+            Gets or sets the interactable prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.InteractionRestriction.Interactor">
+            <summary>
+            Gets or sets the interactor prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.InteractionRestriction.Action">
+            <summary>
+            Gets or sets the actions that the interaction restriction will be applied to.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.ErrorAngle">
+            <summary>
+            Class that represents the analytics type that triggers when an insert action insertion angle is more than the specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.ErrorAngle.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.ErrorAngle"/> class.
+            </summary>
+            <param name="name"> The Error Angle entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorAngle.Angle">
+            <summary>
+            Gets or sets the angle for the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.ErrorAngle.InsertObject">
+            <summary>
+            Gets or sets the insert game object of the insert action.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.WrongAnswer">
+            <summary>
+            Class for the analytics type that triggers when user replies a question wrong.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.WrongAnswer.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.WrongAnswer"/> class.
+            </summary>
+            <param name="name"> The wrong answer entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.WrongAnswer.QuestionObject">
+            <summary>
+            Gets or sets the question object.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.PerformedWrongAction">
+            <summary>
+            Class for the analytics type that triggers an error when an action is performed while another action is still running.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.PerformedWrongAction.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.PerformedWrongAction"/> class.
+            </summary>
+            <param name="name"> The Performed Wrong Action entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.PerformedWrongAction.WrongActionName">
+            <summary>
+            Gets or sets the name of the sub action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.PerformedWrongAction.Action">
+            <summary>
+            Gets or sets the action for the analytics type to operate on.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.DidNotPerformRequiredAction">
+            <summary>
+            Class for the analytics type that triggers an error when an action is not performed while another action is still running.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.DidNotPerformRequiredAction.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.DidNotPerformRequiredAction"/> class.
+            </summary>
+            <param name="name"> The Did Not Perform Required Action entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.DidNotPerformRequiredAction.RequiredActionName">
+            <summary>
+            Gets or sets the name of the required action to perform.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.DidNotPerformRequiredAction.Action">
+            <summary>
+            Gets or sets the action for the analytics type to operate on.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsTypes.CustomType">
+            <summary>
+            Class for supporting custom analytics types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsTypes.CustomType.#ctor(System.String,System.String,System.String,MAGES.Analytics.AnalyticsTypes.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.AnalyticsTypes.CustomType"/> class.
+            </summary>
+            <param name="name"> The Custom Type entry name. </param>
+            <param name="internalType"> The underling type name of the analytics object. </param>
+            <param name="internalTypeUI"> The underling UI type name of the analytics object. </param>
+            <param name="type"> The analytics object type. </param>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.CustomType.Script">
+            <summary>
+            Gets or sets the script that defines what the type will do.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.AnalyticsTypes.CustomType.Action">
+            <summary>
+            Gets or sets the actions that the collision error will be applied to.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsUtilities">
+            <summary>
+            Class containing utility functions for the Analytics module.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.AnalyticsUtilities.Hook">
+            <summary>
+            All the available hook types that the Analytics module can use.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsUtilities.Hook.OnCollisionEnter">
+            <summary>
+            Hook that is called when a collision begins.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsUtilities.Hook.OnCollisionExit">
+            <summary>
+            Hook that is called when a collision exits.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsUtilities.Hook.OnRotation">
+            <summary>
+            Hook that is called when a rotation happens.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsUtilities.Hook.OnTranslation">
+            <summary>
+            Hook that is called when a translation happens.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.AnalyticsUtilities.Hook.OnUpdate">
+            <summary>
+            Hook that is called every frame.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.GetActiveActions">
+            <summary>
+            Finds all the currently active actions and returns their names.
+            </summary>
+            <returns> A list containing the names of all the currently active actions. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.Spawn(UnityEngine.GameObject)">
+            <summary>
+            Spawns the given prefab.
+            </summary>
+            <param name="prefab"> The prefab to spawn. </param>
+            <returns> The instantiated prefab. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.Destroy(UnityEngine.GameObject)">
+            <summary>
+            Destroys the given prefab.
+            </summary>
+            <param name="prefab"> The prefab to destroy. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.AttachCallback(UnityEngine.GameObject,MAGES.Analytics.AnalyticsUtilities.Hook,UnityEngine.Events.UnityAction)">
+            <summary>
+            Attaches the given callback to the given hook for the given gameobject.
+            </summary>
+            <param name="g"> The gameobject that is associated with the hook. </param>
+            <param name="hook"> The type of hook. </param>
+            <param name="callback"> The callback to attach to the hook. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.AttachCallback(UnityEngine.GameObject,MAGES.Analytics.AnalyticsUtilities.Hook,UnityEngine.Events.UnityAction{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Attaches the given callback to the given hook for the given gameobject.
+            </summary>
+            <param name="g"> The gameobject that is associated with the hook. </param>
+            <param name="hook"> The type of hook. </param>
+            <param name="callback"> The callback to attach to the hook. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.DetachCallback(MAGES.Analytics.AnalyticsUtilities.Hook,UnityEngine.GameObject,UnityEngine.Events.UnityAction{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Detaches the given callback from the given hook for the given game object.
+            </summary>
+            <param name="hook"> The type of hook. </param>
+            <param name="g"> The gameobject that is associated with the hook. </param>
+            <param name="callback"> The callback to detach from the hook. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.SpawnInteractor(UnityEngine.GameObject)">
+            <summary>
+            Handles the spawning of interactors.
+            </summary>
+            <param name="prefab"> The interactor prefab. </param>
+            <returns> The spawned interactor. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.DestroyInteractor(UnityEngine.GameObject)">
+            <summary>
+            Handles the destruction of interactors.
+            </summary>
+            <param name="prefab"> The interactor to be destroyed. </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.FindContext(MAGES.BaseActionData,System.String,MAGES.SceneGraphModule.ActionCategory)">
+            <summary>
+            Finds the context of the given action.
+            </summary>
+            <param name="data"> The action data. </param>
+            <param name="context"> The perform context for the analytics entry. </param>
+            <param name="actionCategory"> The category of the action. </param>
+            <returns> The context of the given action. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.ResetTraveledDistance(System.Boolean,System.String)">
+            <summary>
+            Resets the traveled distance of the given prefab.
+            </summary>
+            <param name="zero"> Whether or not to reset to zero. </param>
+            <param name="prefabName"> The prefab to reset its travelled distance.  </param>
+        </member>
+        <member name="M:MAGES.Analytics.AnalyticsUtilities.InvokeByName(System.String,System.String,System.Object[])">
+            <summary>
+            Instantiates the given type and calls the specified method.
+            </summary>
+            <param name="typeName"> The name of the type to instantiate. </param>
+            <param name="methodName"> The name of the method to call. </param>
+            <param name="parameters"> The parameters of the method to call. </param>
+            <returns> The return object of the method. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.CollisionRecord">
+            <summary>
+            Class that represents the tracked data of a collision.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.CollisionRecord.Name">
+            <summary>
+            Gets or sets name of collided object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.CollisionRecord.OtherName">
+            <summary>
+            Gets or sets name of other collision object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.CollisionRecord.ActionNames">
+            <summary>
+            Gets or sets names of the current live Actions.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.CollisionRecord.Timestamp">
+            <summary>
+            Gets or sets its time occurence.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.CollisionRecord.IsTrigger">
+            <summary>
+            Gets or sets a value indicating whether the type of collision is trigger or not.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.CustomErrorTypeDefinition">
+            <summary>
+            The base class for custom errors runtime definitions.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.CustomErrorTypeDefinition.TriggerError(System.Boolean)">
+            <summary>
+            Triggers the error.
+            </summary>
+            <param name="reoccuring"> Whether the error can reoccur multiple times in the same action. </param>
+        </member>
+        <member name="T:MAGES.Analytics.CustomEventTypeDefinition">
+            <summary>
+            The base class for custom events runtime definitions.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.CustomEventTypeDefinition.TriggerEvent">
+            <summary>
+            Triggers the event.
+            </summary>
+            <param name="succeeded"> Whether or not the event succeeded. </param>
+        </member>
+        <member name="T:MAGES.Analytics.CustomObjectiveTypeDefinition">
+            <summary>
+            The base class for custom objectives runtime definitions.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.CustomObjectiveTypeDefinition.TriggerObjective(System.Boolean)">
+            <summary>
+            Triggers the objective.
+            </summary>
+            <param name="succeeded"> Whether or not the objective succeeded. </param>
+        </member>
+        <member name="T:MAGES.Analytics.DefaultIterators">
+            <summary>
+            Class that stores all default iterators.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultIterators.ListIterator">
+            <summary>
+            Gets iterator that iterates over a dictionary of objects that are lists.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultIterators.EventIterator">
+            <summary>
+            Gets iterator that iterates over a dictionary of objects.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.DefaultProcessors">
+            <summary>
+            Class that stores all default processors.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.DummyTrue">
+            <summary>
+            Gets a dummy processor that always returns true.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.DummyFalse">
+            <summary>
+            Gets a dummy processor that always returns false.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorAvg">
+            <summary>
+            Gets processor that finds the average from a given list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorSum">
+            <summary>
+            Gets processor that finds the sum from a given list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorMax">
+            <summary>
+            Gets processor that finds the max from a given list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorMin">
+            <summary>
+            Gets processor that finds the min from a given list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorMedian">
+            <summary>
+            Gets processor that finds the median from a given list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorActionPerformedState">
+            <summary>
+            Gets processor that finds if certain subactions were performed under another action.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorPerformedWrongAction">
+            <summary>
+            Gets processor that finds if certain actions were performed while another specified action is active.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorDidNotPerformRequiredAction">
+            <summary>
+            Gets processor that finds if certain actions were not performed while another specified action is active.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorOperationScoreLimit">
+            <summary>
+            Gets processor that finds the specified action exceeded the time limit.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorTimeLimit">
+            <summary>
+            Gets processor that finds the specified action exceeded the time limit.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorOperationDuration">
+            <summary>
+            Gets processor that finds the operation duration.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorCollision">
+            <summary>
+            Gets processor that detects if a collision happened in given actions.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorRotationLimit">
+            <summary>
+            Gets processor that detects a rotation limit has been reached.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorRangeOfMotion">
+            <summary>
+            Gets processor that detects a range of motion limit has been reached.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorAngleLimit">
+            <summary>
+            Gets processor that detects if the insert angle of an insert action is greater than the limit.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.DefaultProcessors.ProcessorInteractionRestriction">
+            <summary>
+            Gets processor that detects a range of motion limit has been reached.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.Event">
+            <summary>
+            The class that represents an event.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Event.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Event"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Event.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Event"/> class.
+            </summary>
+            <param name="name"> The name of the new <see cref="T:MAGES.Analytics.Event"/>. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Event.SetPrefix(System.String)">
+            <summary>
+            Sets the store prefix in the <see cref="T:MAGES.DataContainerModule"/> for this <see cref="T:MAGES.Analytics.Event"/>.
+            </summary>
+            <param name="prefix"> The store prefix in the <see cref="T:MAGES.DataContainerModule"/> for this <see cref="T:MAGES.Analytics.Event"/>. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Event"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Event.AttachDefaultData">
+            <summary>
+            Attaches name and timestamp as default data for the <see cref="T:MAGES.Analytics.Event"/>.
+            </summary>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Event"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Event.AttachData(System.String,System.Object)">
+            <summary>
+            Attaches data to the <see cref="T:MAGES.Analytics.Event"/> and stores it to the <see cref="T:MAGES.DataContainerModule"/>.
+            </summary>
+            <param name="key"> The key of the data. </param>
+            <param name="value"> The value of the data. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Event"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Event.GetData``1(System.String)">
+            <summary>
+            Gets the value of the data stored in the event with the specified key.
+            </summary>
+            <param name="key"> The key of the data. </param>
+            <typeparam name="T"> The type of the data. </typeparam>
+            <returns> The value of the data stored in the event with the specified key. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Event.Export">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.EventIterator">
+            <summary>
+            Iterator for iterating over a dictionary of objects.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventIterator.Iterate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Func{System.Object,System.Object})">
+            <inheritdoc cref="M:MAGES.Analytics.IQueryIterator.Iterate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Func{System.Object,System.Object})"/>
+        </member>
+        <member name="T:MAGES.Analytics.EventsScriptableObject">
+            <summary>
+            Scriptable object that stores the operation events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.AllEvents">
+            <summary>
+            Gets or sets the disctionary holding all the events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.ActionPerformedEvents">
+            <summary>
+            Gets or sets the disctionary holding all the action performed events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.ActionUndoneEvents">
+            <summary>
+            Gets or sets the disctionary holding all the action undone events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.SessionStartedEvents">
+            <summary>
+            Gets or sets the disctionary holding all the session started events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.SessionEndedEvents">
+            <summary>
+            Gets or sets the disctionary holding all the session ended events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.OnCollisionEvents">
+            <summary>
+            Gets or sets the disctionary holding all the on collision events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.OnInteractionEvents">
+            <summary>
+            Gets or sets the disctionary holding all the on interaction events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventsScriptableObject.CustomEventTypeEvents">
+            <summary>
+            Gets or sets the disctionary holding all the custom event types objects.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventsScriptableObject.GetDictionaryCount(System.String)">
+            <summary>
+            Return the size of the dictionary of the given internal type.
+            </summary>
+            <param name="name"> The name of dictionary internal type. </param>
+            <returns> The size of the dictionary of the given internal type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.EventsScriptableObject.GetDictionaryKeys(System.String)">
+            <summary>
+            Return the size of the dictionary of the given internal type.
+            </summary>
+            <param name="name"> The name of dictionary internal type. </param>
+            <returns> The size of the dictionary of the given internal type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.EventsScriptableObject.Invalidate(MAGES.Analytics.EventTypes.BaseType)">
+            <summary>
+            Invalidates the given event.
+            </summary>
+            <param name="baseEvent"> The event to invalidate. </param>
+        </member>
+        <member name="M:MAGES.Analytics.EventsScriptableObject.Delete(MAGES.Analytics.EventTypes.BaseType)">
+            <summary>
+            Deletes the given event object.
+            </summary>
+            <param name="baseEvent"> The event object to be deleted. </param>
+        </member>
+        <member name="M:MAGES.Analytics.EventsScriptableObject.Rename(MAGES.Analytics.EventTypes.BaseType,System.String,System.String)">
+            <summary>
+            Renames an event object of specific name and type.
+            </summary>
+            <param name="baseEvent"> The event object to be renamed. </param>
+            <param name="oldName"> The current name of the event object. </param>
+            <param name="newName"> The new name of the event object. </param>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes">
+            <summary>
+            The class containing all event types.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.BaseType">
+            <summary>
+            Base class for all event types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.BaseType.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.BaseType"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type name of the event. </param>
+            <param name="internalTypeUI"> The underling UI type name of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.Name">
+            <summary>
+            Gets or sets the name of the event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.InternalType">
+            <summary>
+            Gets or sets the type name of the event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.InternalTypeUI">
+            <summary>
+            Gets or sets the type name of the event UI.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.Label">
+            <summary>
+            Gets or sets the label of the event that is visible to the editor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.UIPayload">
+            <summary>
+            Gets or sets the event payload that is used by the set up UI(all key value pairs).
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.BaseType.RuntimePayload">
+            <summary>
+            Gets or sets the event payload that is used at runtime(all key value pairs).
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.ActionPerformed">
+            <summary>
+            Class for the event type that triggers when an action is performed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.ActionPerformed.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.ActionPerformed"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.ActionPerformed.Action">
+            <summary>
+            Gets or sets the action name.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.ActionUndone">
+            <summary>
+            Class for the event type that triggers when an action is undone.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.ActionUndone.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.ActionUndone"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.ActionUndone.Action">
+            <summary>
+            Gets or sets the action name.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.SessionStarted">
+            <summary>
+            Class for the event type that triggers when a session starts.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.SessionStarted.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.SessionStarted"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.SessionEnded">
+            <summary>
+            Class for the event type that triggers when a session ends.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.SessionEnded.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.SessionEnded"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.OnInteraction">
+            <summary>
+            Class for the event type that triggers when a specified interaction happens.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.OnInteraction.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.OnInteraction"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnInteraction.Context">
+            <summary>
+            Gets or sets the context for the interaction check.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnInteraction.Interactable">
+            <summary>
+            Gets or sets the interactable prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnInteraction.Interactor">
+            <summary>
+            Gets or sets the interactor prefab.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.OnCollision">
+            <summary>
+            Class for the event type that triggers when a specified collision happens.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.OnCollision.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.OnCollision"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnCollision.Context">
+            <summary>
+            Gets or sets the context for the collision check.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnCollision.CollisionType">
+            <summary>
+            Gets or sets the collision type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnCollision.TargetPrefab">
+            <summary>
+            Gets or sets the target prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.OnCollision.Collider">
+            <summary>
+            Gets or sets the collider.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.EventTypes.CustomEventType">
+            <summary>
+            Class for supporting custom event types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.EventTypes.CustomEventType.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.EventTypes.CustomEventType"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+            <param name="internalType"> The underling type of the event. </param>
+            <param name="internalTypeUI"> The underling UI type of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.EventTypes.CustomEventType.Script">
+            <summary>
+            Gets or sets the script that defines what the type will do.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.HelpUrls">
+            <summary>
+            Help URLs for the analytics module.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.HelpUrls.Version">
+            <summary>
+            The docs version.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.HelpUrls.BaseURL">
+            <summary>
+            The base URL for the docs. Contains the version of the docs.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.HelpUrls.AnalyticsManagedObject">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Analytics.AnalyticsManagedObject"/>.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.ICustomBaseTypeDefinition`2">
+            <summary>
+            The base class for custom types runtime definitions.
+            </summary>
+            <typeparam name="TEntryType"> The type of the analytics type. </typeparam>
+            <typeparam name="TCustomType"> The type of the custom type. </typeparam>
+        </member>
+        <member name="P:MAGES.Analytics.ICustomBaseTypeDefinition`2.Entry">
+            <summary>
+            Gets or sets the registered entries.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ICustomBaseTypeDefinition`2.ActionName">
+            <summary>
+            Gets or sets the name of the action associated with this custom type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.ICustomBaseTypeDefinition`2.Data">
+            <summary>
+            Gets or sets the data associated with the custom type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.Definition(System.String,`1,System.Collections.Generic.Dictionary{System.String,`0},`0,MAGES.Analytics.MAGESAnalyticsRuntime.Type)">
+            <summary>
+            Defines what that the analytics runtime does.
+            </summary>
+            <param name="actionName"> The name of the action. </param>
+            <param name="customType"> The custom type. </param>
+            <param name="registeredEntries"> The dictionary holding all the registered analytics types. </param>
+            <param name="registeredEntry"> The analytics type entry. </param>
+            <param name="type"> The type of the custom type. </param>
+        </member>
+        <member name="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnCreate">
+            <summary>
+            Called once on start up, when the type gets created.
+            </summary>
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionUndo(MAGES.BaseActionData)"/>.
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionInitialize(MAGES.BaseActionData)"/>.
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionPerform(MAGES.BaseActionData,System.Boolean)"/>.
+        </member>
+        <member name="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionInitialize(MAGES.BaseActionData)">
+            <summary>
+            Called each time an action gets initialized.
+            </summary>
+            <param name="baseActionData"> The data of the action. </param>
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionPerform(MAGES.BaseActionData,System.Boolean)"/>.
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionUndo(MAGES.BaseActionData)"/>.
+        </member>
+        <member name="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionUndo(MAGES.BaseActionData)">
+            <summary>
+            Called each time an action gets undone.
+            </summary>
+            <param name="baseActionData"> The data of the action. </param>
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionInitialize(MAGES.BaseActionData)"/>.
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionPerform(MAGES.BaseActionData,System.Boolean)"/>.
+        </member>
+        <member name="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionPerform(MAGES.BaseActionData,System.Boolean)">
+            <summary>
+            Called each time an action gets performed.
+            </summary>
+            <param name="baseActionData"> The data of the action. </param>
+            <param name="skipped"> Whether the action was skipped or performed. </param>
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionInitialize(MAGES.BaseActionData)"/>.
+            <seealso cref="M:MAGES.Analytics.ICustomBaseTypeDefinition`2.OnActionUndo(MAGES.BaseActionData)"/>.
+        </member>
+        <member name="T:MAGES.Analytics.IEventDefinition">
+            <summary>
+            The base interface for event definitions.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.IEventDefinition.Definition">
+            <summary>
+            Defines what that value of an event is.
+            </summary>
+            <returns> The value of the event. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.InteractionRecord">
+            <summary>
+            Class that represents the tracked data of an interaction.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.InteractionRecord.Interactor">
+            <summary>
+            Gets or sets name of interactor object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.InteractionRecord.Interactable">
+            <summary>
+            Gets or sets name of interactable object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.InteractionRecord.ActionNames">
+            <summary>
+            Gets or sets names of the current live Actions.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.InteractionRecord.Timestamp">
+            <summary>
+            Gets or sets its time occurence.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.IQueryIterator">
+            <summary>
+            The base class for all query iterators.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.IQueryIterator.Iterate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Func{System.Object,System.Object})">
+            <summary>
+            Defines how to iterate over the given data and applies to them the provided manipulator function.
+            </summary>
+            <param name="database"> The data to iterate. </param>
+            <param name="manipulator"> Function that filters the data on each iteration. </param>
+            <returns> A list with filtered data. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.ListIterator">
+            <summary>
+            Iterator for iterating over a dictionary of objects that are lists.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.ListIterator.Iterate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Func{System.Object,System.Object})">
+            <inheritdoc cref="M:MAGES.Analytics.IQueryIterator.Iterate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Func{System.Object,System.Object})"/>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalytics">
+            <summary>
+            The MAGES analytics module implementation.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy">
+            <summary>
+            The policy to calculate the score of actions performed multiple times.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.Average">
+            <summary>
+            Keep the average of the action scores.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.Max">
+            <summary>
+            Keep the max of the action scores.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.Min">
+            <summary>
+            Keep the min of the action scores.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.First">
+            <summary>
+            Keep the score of the first action that was performed.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.Last">
+            <summary>
+            Keep the score of the last action that was performed.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.ScoringMergePolicy.Aggregate">
+            <summary>
+            Keep all the action scores. Note that the total score of the operation could end up being higher than 100%.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalytics.Output">
+            <summary>
+            The output options for the analytics logs.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalytics.Output.File">
+            <summary>
+            The output will be to a file.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.SuccessThreshold">
+            <summary>
+            Gets or sets the score threshold for a successful operation.
+            <remarks> If the score is above or equal to this value, the operation is considered successful. If the score is below this value, the operation is considered a failure. The accepted values are between 0-100. </remarks>
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.SessionOverviewPrefab">
+            <summary>
+            Gets or sets the Session overview prefab which gets displayed on operation end.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.RuntimeAnalyticsNotifications">
+            <summary>
+            Gets or sets a value indicating whether the analytics notifications will be displayed or not.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.ActionScoringMergePolicy">
+            <summary>
+            Gets or sets the policy for calculating the score of actions that are performed multiple times.</summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.GuidMap">
+            <summary>
+            Gets or sets the dictionary that contains the mapping between filenames and guids.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.Queries">
+            <summary>
+            Gets the analytics queries.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.Events">
+            <summary>
+            Gets the analytics events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.ExportedData">
+            <summary>
+            Gets or sets the JObject holding all the exported data of the operation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalytics.AnalyticsRuntime">
+            <summary>
+            Gets the analytics runtime.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.InitializeTimer">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.InvalidateTimer">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.GetTimeSinceStartUp">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.GetRealTimeSinceStartUp">
+            <summary>
+            Gets the time since the start of the operation.
+            </summary>
+            <returns> The time since the start of the operation. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.AddEvent``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.AddQuery``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.RemoveEvent``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.RemoveQuery``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.GetEvent``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.GetQuery``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.ExportAll">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.ExportQueries(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalytics.ExportEvents(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsEntry">
+            <summary>
+            A class that represents a single analytics entry.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsEntry.#ctor(System.String,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.MAGESAnalyticsEntry"/> class.
+            </summary>
+            <param name="actionName"> The name of the action to associate this analytics entry with. </param>
+            <param name="actionScore"> The score of the action that is associated with this analytics entry. </param>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType">
+            <summary>
+            The different types of errors.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.Procedural">
+            <summary>
+            Failure or failures to follow required procedures.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.Diagnostic">
+            <summary>
+            Failure to either establish an accurate and timely explanation of a situation or communicate that explanation to the other people.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.Communication">
+            <summary>
+            Failure to effectively communicate a problem or situation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.Judgment">
+            <summary>
+            Failure that is caused due to poor judgement.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.DecisionMaking">
+            <summary>
+            Failure that is caused due to poor decision making.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.ErrorType.KnowledgeGap">
+            <summary>
+            Failure that is caused due to lack of knowledge.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsEntry.ActionOccurence">
+            <summary>
+            Gets the dictionary that holds the number of times an action has been performed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsEntry.InitializeScore(System.Single)">
+            <summary>
+            Initializes the score of the action.
+            </summary>
+            <param name="score"> The initial score of the action. </param>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsEntry.ProcessError(MAGES.Analytics.MAGESAnalyticsEntry.Specification,System.Action,System.Boolean,System.Boolean)">
+            <summary>
+            Attaches an error to the action.
+            </summary>
+            <param name="spec"> The specification of the error. </param>
+            <param name="onError"> The action to perform when the error occurs. </param>
+            <param name="reoccuring"> Whether the error can reoccur multiple times in the same action. </param>
+            <param name="filtering"> Whether or not the error will filter data from the data container. </param>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsEntry.Trigger(MAGES.Analytics.AnalyticsTypes.BaseType,System.Boolean)">
+            <summary>
+            Triggers the error.
+            </summary>
+            <param name="entryData"> The data associated with the error entry. </param>
+            <param name="reoccuring"> Whether the error can reoccur multiple times in the same action. </param>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsEntry.Specification">
+            <summary>
+            The specification of an error.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.FilterPrefix">
+            <summary>
+            The DataContainer prefix for the filtering.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.FilterScope">
+            <summary>
+            The DataContainer scope of the filtering.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.BaseData">
+            <summary>
+            The base data of the error.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.ProcessorTarget">
+            <summary>
+            The target to provide an extra context for the processing.
+            </summary>
+            <remarks> Interpreted internally by each processor. </remarks>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.ProcessorArguments">
+            <summary>
+            Arguments for additional context for the processing.
+            </summary>
+            <remarks> Interpreted internally by each processor. </remarks>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.Processor">
+            <summary>
+            The processor of the error query.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.Iterator">
+            <summary>
+            The iterator of the error query thats is matching with the DataContainer Scema Type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsEntry.Specification.KeyValuePairs">
+            <summary>
+            Additional key value pairs that will be attached to the error event.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsObject`1">
+            <summary>
+            Base class for all analytics objects.
+            </summary>
+            <typeparam name="T"> The type of the derived analytics object. </typeparam>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsObject`1.SerializedObject">
+            <summary>
+            Gets or sets the name for the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsObject`1.Message">
+            <summary>
+            Gets or sets the message for the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsObject`1.Target">
+            <summary>
+            Gets or sets the target for the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsObject`1.Tag">
+            <summary>
+            Gets or sets the tag for the analytics object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESAnalyticsObject`1.Name">
+            <summary>
+            Gets or sets the name for the analytics object.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.SetName(System.String)">
+            <summary>
+            Sets the name for the analytics object.
+            </summary>
+            <param name="name"> The name of the analytics object. </param>
+            <returns> The instance of this analytics object. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.SetTag(System.String)">
+            <summary>
+            Sets the tag of the analytics object.
+            </summary>
+            <param name="tag"> The tag of the analytics objects. </param>
+            <returns> The instance of this analytics object. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.GetTag">
+            <summary>
+            Gets the tag of the analytics object.
+            </summary>
+            <returns> The tag of the analytics object. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.SetTarget(System.Object)">
+            <summary>
+            Sets the target of the analytics object.
+            </summary>
+            <param name="target"> The target of the analytics object. </param>
+            <returns> The instance of this analytics object. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.SetMessage(System.String)">
+            <summary>
+            Sets the message of the analytics object.
+            </summary>
+            <param name="message"> The message of the analytics object. </param>
+            <returns> The instance of this analytics object. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsObject`1.Export">
+            <summary>
+            Exports the analytics object.
+            </summary>
+            <returns> The JObject containg the event data. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsRuntime">
+            <summary>
+            The MAGES analytics module runtime implementation.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESAnalyticsRuntime.Type">
+            <summary>
+            The different types of analytics.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsRuntime.Type.Error">
+            <summary>
+            The error type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsRuntime.Type.Objective">
+            <summary>
+            The objective type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsRuntime.Type.Event">
+            <summary>
+            The event type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESAnalyticsRuntime.Type.None">
+            <summary>
+            No type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESAnalyticsRuntime.Initialize">
+            <summary>
+            Initializes the runtime analytics module.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESEvent">
+            <summary>
+            The class that represents an event.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESEvent.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.MAGESEvent"/> class.
+            </summary>
+            <param name="name"> The name of the event. </param>
+        </member>
+        <member name="P:MAGES.Analytics.MAGESEvent.EventOccurence">
+            <summary>
+            Gets the dictionary that holds the number of times an event has occured.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESEvent.ProcessEvent(MAGES.Analytics.EventTypes.BaseType)">
+            <summary>
+            Emits an event with the given payload.
+            </summary>
+            <param name="eventObject"> The event object. </param>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESObjective">
+            <summary>
+            The class that represents an objective.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.MAGESObjective"/> class.
+            </summary>
+            <param name="objectiveName"> The name of the objective. </param>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.RunQuery(MAGES.Analytics.MAGESObjective.Specification,System.Boolean)">
+            <summary>
+            Run the query of the objective.
+            </summary>
+            <param name="spec"> The specification of the objective. </param>
+            <param name="filtering"> Defines if the objective will do filtering from the data container or not. </param>
+            <returns> True if the query was successfull. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.UnregisterQuery">
+            <summary>
+            Unregisters the objective query.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.EmitObjective(System.Boolean,System.String)">
+            <summary>
+            Emits the objective event.
+            </summary>
+            <param name="state"> the state of the objective(successfull or not). </param>
+            <param name="description"> the description of the objective. </param>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.ProcessObjective(MAGES.Analytics.MAGESObjective.Specification,System.Boolean)">
+            <summary>
+            Defines and attaches the objective to the appropriate hook.
+            </summary>
+            <param name="spec"> The specification of the objective. </param>
+            <param name="filtering"> Defines if the objective will do filtering from the data container or not. </param>
+            <returns> True if the objective was successfull. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.MAGESObjective.Trigger(MAGES.Analytics.AnalyticsTypes.BaseType,System.Boolean)">
+            <summary>
+            Trigger the objective.
+            </summary>
+            <param name="entryData"> The data associated with the objective. </param>
+            <param name="succeeded"> Whether or not the objective succeded. </param>
+        </member>
+        <member name="T:MAGES.Analytics.MAGESObjective.Specification">
+            <summary>
+            The specification of an objective.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.FilterPrefix">
+            <summary>
+            The prefix for the filtering.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.FilterScope">
+            <summary>
+            The scope of the filtering.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.FilterField">
+            <summary>
+            The specific field for the filtering.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.Description">
+            <summary>
+            The description of the objective.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.ProcessorTarget">
+            <summary>
+            The target of the objective.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.ProcessorArguments">
+            <summary>
+            The arguments of the objective.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.Processor">
+            <summary>
+            The processor of the objective.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.MAGESObjective.Specification.Iterator">
+            <summary>
+            The iterator of the objective query.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.Processor">
+            <summary>
+            The class that represents a processor.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.Processor.process">
+            <summary>
+            The function that will be applied to the filtered data from the query.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Processor.#ctor(System.Func{System.Collections.Generic.List{System.Object},System.Object,System.Collections.Generic.List{System.Object},System.Tuple{System.Object,System.Boolean}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Processor"/> class.
+            </summary>
+            <param name="process"> The function that will be applied to the filtered data from the query. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Processor.Apply(System.Collections.Generic.List{System.Object},System.Object,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Applies function to the filtered data from the query.
+            </summary>
+            <param name="list"> The filtered data from the query. </param>
+            <param name="target"> A target to provide an extra context for the processing. </param>
+            <param name="arguments"> Arguments for additional context for the processing. </param>
+            <returns> A Tuple that holds the generated result and a bool that indicates whether or not the goal of the query was successfull. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.Query">
+            <summary>
+            Class that represents a query.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Query.Payload">
+            <summary>
+            Gets query's resulting payload.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Query.GeneratedResult">
+            <summary>
+            Gets a value indicating whether the processing result of the processor succeeds the comparison with the target.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Query.Unwrap">
+            <summary>
+            Unwraps the query to indicate whether or not it was successfull.
+            </summary>
+            <returns> True or false depending on whether or not the query was successfull. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.SetIterator(MAGES.Analytics.IQueryIterator)">
+            <summary>
+            Sets the iterator for how the query will iterate over the data.
+            </summary>
+            <param name="iterator"> The iterator. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.SetIfFiltering(System.Boolean)">
+            <summary>
+            Sets if the query will filter data form the data container.
+            </summary>
+            <param name="filtering"> Defines if the query will do filtering from the data container or not. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.SetFilter(System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Sets the filtering context.
+            </summary>
+            <param name="pattern"> The pattern to filter from. </param>
+            <param name="scope"> Specific keys from the filtered data to apply processing to. </param>
+            <param name="field"> Retireve a specific field from the filtered data. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.SetProcessor(MAGES.Analytics.Processor)">
+            <summary>
+            Sets the processor that will be applied to the querys' filtered data.
+            </summary>
+            <param name="processor"> The processor that will be applied to the querys' filtered data. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.SetArguments(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Sets the arguments of the query for added context in the processing.
+            </summary>
+            <param name="arguments"> The arguments of the query. </param>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.Process">
+            <summary>
+            Filters the data from the given context and applies the processor to the filtered data.
+            </summary>
+            <returns> The instance of this <see cref="T:MAGES.Analytics.Query"/>. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Query.Export">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.SessionOverviewController">
+            <summary>
+            A component which displays the session overview.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.SessionOverviewController.Close">
+            <summary>
+            Closes the session overview UI.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.SessionOverviewController.SelectTab(UnityEngine.GameObject)">
+            <summary>
+            Selects and displays the given tab.
+            </summary>
+            <param name="tab">The tab to display.</param>
+        </member>
+        <member name="T:MAGES.Analytics.SettingsScriptableObject">
+            <summary>
+            Scriptable object that serializes the settings of the analytics.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.SettingsScriptableObject.SceneGraphActions">
+            <summary>
+            Gets or sets the actions of the scene graph.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.SettingsScriptableObject.StorePath">
+            <summary>
+            Gets or sets the store path of analytics.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.TransformRecord">
+            <summary>
+            Class that represents the tracked data of transform.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.Name">
+            <summary>
+            Gets or sets name of the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.Position">
+            <summary>
+            Gets or sets the position of the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.Rotation">
+            <summary>
+            Gets or sets the rotation of the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.ActionNames">
+            <summary>
+            Gets or sets names of the current live Actions.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.Timestamp">
+            <summary>
+            Gets or sets its time occurence.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.DistanceCovered">
+            <summary>
+            Gets or sets the distance covered thus far.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.TransformRecord.DistanceToCompare">
+            <summary>
+            Gets or sets the to compare to.
+            </summary>
+        </member>
+    </members>
+</doc>

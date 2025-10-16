@@ -29,11 +29,13 @@ namespace MAGES.XRPlotLib
 
         public IEnumerator DisplayDataAsync()
         {
-            foreach (DataPoint point in dataSet.data)
+            Debug.Log("Reached Display Data");
+            int pointsPerFrame = 100; // adjust based on testing
+            for (int i = 0; i < dataSet.data.Length; i++)
             {
-                InstantiatePoint(point);
-                
-                yield return null;
+                InstantiatePoint(dataSet.data[i]);
+                if (i % pointsPerFrame == 0)
+                    yield return null;
             }
 
             SetValidityOfData(true);
@@ -168,6 +170,7 @@ namespace MAGES.XRPlotLib
 
         public IEnumerator ParseDataSetAsync(string csvDataSet)
         {
+            Debug.Log("Started Parsing Data");
             TextAsset txt = (TextAsset)Resources.Load(csvDataSet, typeof(TextAsset));
             string jsonString = txt.text;
 
@@ -250,6 +253,7 @@ namespace MAGES.XRPlotLib
 
                 yield return null;
             }
+            Debug.Log("Data Parsed");
         }
 
         private void UpdateMinMax(List<float> newPoint)

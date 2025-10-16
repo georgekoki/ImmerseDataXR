@@ -1,0 +1,24 @@
+{
+    "name": "MAGES.Analytics.Runtime.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:27619889b8ba8c24980f49ee34dbb44a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Analytics.Runtime.dll",
+        "MAGES.DataContainer.dll",
+        "MAGES.SceneGraph.Runtime.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

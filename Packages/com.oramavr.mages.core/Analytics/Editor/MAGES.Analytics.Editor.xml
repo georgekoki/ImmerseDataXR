@@ -1,0 +1,872 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Analytics.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Analytics.Editor.ActionPerformedEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when an action is performed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionPerformedEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ActionPerformedEventUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionPerformedEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionPerformedEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionPerformedEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ActionUndoneEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when an action is skipped.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionUndoneEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ActionUndoneEventUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionUndoneEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionUndoneEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ActionUndoneEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.BaseAnalyticsStateMachine">
+            <summary>
+            The base state machine for the analytics.
+            </summary>
+        </member>
+        <member name="F:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.SelectedContentClassName">
+            <summary>
+            The name of the selected content class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.BaseAnalyticsStateMachine"/> class.
+            </summary>
+            <param name="selectedSceneGraphData"> The name of the selected scene graph data. </param>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.SelectedSceneGraphData">
+            <summary>
+            Gets or sets the sceneGraphData name of the currently selected bundle.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.InternalType">
+            <summary>
+            Gets or sets the currently selected type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.InternalTypeUI">
+            <summary>
+            Gets or sets the currently selected UI type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.InternalTypes">
+            <summary>
+            Gets or sets the dictionary holding the mapping between type names and types.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.TypesUI">
+            <summary>
+            Gets or sets the array holding all the UI types.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.EventTypesUI">
+            <summary>
+            Gets or sets the array holding all the UI types.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.ActionNames">
+            <summary>
+            Gets or sets the list of action names.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.SavePath">
+            <summary>
+            Gets or sets the path where the analytics will be saved.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State0(UnityEngine.UIElements.ScrollView)">
+            <summary>
+            The first state of the state machine.
+            </summary>
+            <param name="parent"> The parent UI element. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <summary>
+            The second state of the state machine.
+            </summary>
+            <param name="parent"> The parent UI element. </param>
+            <param name="onValueChanged"> Lambda to be called when the value changes. </param>
+            <param name="reset"> Whether or not to reset the parent. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <summary>
+            The third state of the state machine.
+            </summary>
+            <param name="parent"> The parent UI element. </param>
+            <param name="onValueChanged"> Lambda to be called when the value changes. </param>
+            <param name="reset"> Whether or not to reset the parent. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreateExistingItemButton(MAGES.Analytics.AnalyticsScriptableObject,System.String,MAGES.Analytics.AnalyticsTypes.Type,UnityEngine.UIElements.ScrollView,System.String,System.Type,UnityEngine.UIElements.ScrollView,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Type}},System.Boolean)">
+            <summary>
+            Creates a new button for the existing items view.
+            </summary>
+            <param name="so"> The scriptable object associated with this item. </param>
+            <param name="assetName"> The asset name of the scriptable object. </param>
+            <param name="analyticsType"> The analytics type (error or objective). </param>
+            <param name="parent"> The parent element of this tab. </param>
+            <param name="buttonText"> The text of the button. </param>
+            <param name="entryType"> The type of the selected error. </param>
+            <param name="existingItemsView"> The scroll view containing all the existing items(buttons). </param>
+            <param name="items"> The items that are currently displayed in the existing item scroll view. </param>
+            <param name="allTypesMode"> Whether or not the all types option is selected from the dropdown. </param>
+            <returns> The created button. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.FindSceneGraphAssetPath(System.String)">
+            <summary>
+            Finds the path to the SceneGraphData asset.
+            </summary>
+            <param name="assetName"> The name of the SceneGraphData asset. </param>
+            <returns> The path to the SceneGraphData asset. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.FindSceneGraphAsset(System.String)">
+            <summary>
+            Finds the SceneGraphData asset.
+            </summary>
+            <param name="assetName"> The name of the SceneGraphData asset. </param>
+            <returns> The SceneGraphData asset. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.DeleteUnusedAssets(System.String)">
+            <summary>
+            Deletes the unused assets.
+            </summary>
+            <param name="savePath"> The path where the assets are saved. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.FindUIType(System.Type)">
+            <summary>
+            Finds the matching UI type for the given type.
+            </summary>
+            <param name="type"> The given type. </param>
+            <returns> The matched UI type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.FindEventUIType(System.Type)">
+            <summary>
+            Finds the matching UI type for the given type.
+            </summary>
+            <param name="type"> The given type. </param>
+            <returns> The matched UI type. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.GetTypeNames(System.Collections.Generic.List{MAGES.Analytics.AnalyticsTypes.Category},MAGES.Analytics.AnalyticsTypes.Type,System.String)">
+            <summary>
+            Creates a list holding the names of the types filtered by the given category.
+            </summary>
+            <param name="categories"> The categories to filter the types. </param>
+            <param name="analyticsType"> The analytics type (error or objective). </param>
+            <param name="actionSpecificType"> The type of the error, if it is action specific. </param>
+            <returns> A list holding the names of the types filtered by the given category. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.ClearParent(System.Int32,UnityEngine.UIElements.ScrollView)">
+            <summary>
+            Clears the parent visula element of the selected tab.
+            </summary>
+            <param name="startIndex"> The child index to start the clearing. </param>
+            <param name="parent"> The reference to the parent. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreatePopupPanel(MAGES.Analytics.AnalyticsScriptableObject,System.String,MAGES.Analytics.AnalyticsTypes.Type,System.String,System.String,System.Type,UnityEngine.UIElements.ScrollView,UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.ScrollView,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Type}},System.Boolean)">
+            <summary>
+            Creates a new popup panel.
+            </summary>
+            <param name="so"> The scriptable object associated with this item. </param>
+            <param name="assetName"> The asset name of the scriptable object. </param>
+            <param name="analyticsType"> The analytics type (error or objective). </param>
+            <param name="name"> The title of the popup window. </param>
+            <param name="entry"> The name of the entry to manipulate in the popup. </param>
+            <param name="entryType"> The type of the entry to manipulate in the popup. </param>
+            <param name="parent"> The parent element of this tab. </param>
+            <param name="shadow"> The shadow ui element. </param>
+            <param name="itemsView"> The scroll view containing all the existing items(buttons). </param>
+            <param name="items"> The items that are currently displayed in the existing item scroll view. </param>
+            <param name="edit"> Whether or not we are in edit or create mode. </param>
+            <returns> A new popup window. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreateConformationPopupPanel(System.String,System.String,UnityEngine.UIElements.VisualElement,System.Action,System.Action)">
+            <summary>
+            Creates a new conformation popup panel.
+            </summary>
+            <param name="name"> The name of the panel. </param>
+            <param name="entryName"> The name of the entry. </param>
+            <param name="shadow"> The shadow visual element. </param>
+            <param name="yes"> The action to be invoked when pressing yes. </param>
+            <param name="no"> The action to be invoked when pressing mo. </param>
+            <returns> The newly created popup panel. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreatePopupShadow">
+            <summary>
+            Creates a new shadow element for the popup window.
+            </summary>
+            <returns> The newly created shadow element. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreateSeparatorLine">
+            <summary>
+            Creates a new separator line element.
+            </summary>
+            <returns> The newly created separator line element. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.CreateNoResultLabel(System.String)">
+            <summary>
+            Creates a new label indicating that there are no results.
+            </summary>
+            <param name="type"> The type of the element being searched. </param>
+            <returns> The newly created label element. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.Save``1(System.String)">
+            <summary>
+            Creates or loads a new scriptable object.
+            </summary>
+            <typeparam name="T"> The type of the scriptable object. </typeparam>
+            <param name="fileName"> The name of the scriptable object. </param>
+            <returns> The newly created scriptable object. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.BaseAnalyticsUI">
+            <summary>
+            The base class that contains and draws the base UI for all analytics types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Initialize(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.VisualElement,MAGES.Analytics.AnalyticsTypes.Type,System.Type,System.Type,System.Boolean,UnityEngine.UIElements.ScrollView,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Type}},MAGES.Analytics.Editor.BaseAnalyticsStateMachine)">
+            <summary>
+            Draws the analytics object pane.
+            </summary>
+            <param name="so"> The scriptable object that is associated with this type. </param>
+            <param name="entryName"> The name of the entry. </param>
+            <param name="assetName"> The name of the action. </param>
+            <param name="savePath"> The save path for the scriptable objects. </param>
+            <param name="parent"> The parent UI element of the foldout list UI element. </param>
+            <param name="foldout"> The foldout element that the analytics object specific UI elements will be under. </param>
+            <param name="type"> Specifies the analytics object type (objective or error). </param>
+            <param name="internalType"> The type of the internal type that holds the data. </param>
+            <param name="internalTypeUI"> The type of the internal type that holds the UI. </param>
+            <param name="editMode"> Specifies if the UI is in edit mode. </param>
+            <param name="existingItemsView"> The dropdown element that holds the list of all the analytics entries of the selected type. </param>
+            <param name="items"> The items that are currently displayed in the existing item scrollview. </param>
+            <param name="stateMachine"> Reference to the state machine. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Saves the changes made to this analytics entry.
+            </summary>
+            <param name="so"> The scriptable object that the data are stored to. </param>
+            <param name="name"> The name of the error to save. </param>
+            <param name="typeOfError"> The type of the error to save. </param>
+            <param name="info"> The info of the error to save. </param>
+            <param name="penalty"> The penalty of the error to save. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <summary>
+            Deletes the specified analytics object from the scriptable object and UI.
+            </summary>
+            <param name="so"> The scriptable object that the data are stored to. </param>
+            <param name="key"> The name of the error to delete. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Draws the analytics object specific UI elements.
+            </summary>
+            <param name="so"> The scriptable object that the data are stored to. </param>
+            <param name="foldout"> The parent foldout element that the analytics object specific UI elements will be under. </param>
+            <param name="isObjective"> Specifies is the analytics object is for the objective UI or not. </param>
+            <param name="editMode"> Specifies whether or not we are int edit or create mode. </param>
+            <param name="entryName"> The name of the current entry that gets edited. </param>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.BaseTypeEventUI">
+            <summary>
+            Class that contains and draws the base UI elements for all the event types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.BaseTypeEventUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseTypeEventUI.Payload">
+            <summary>
+            Gets or Sets the payload list.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseTypeEventUI.Actions">
+            <summary>
+            Gets or sets the actions list.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.Initialize(MAGES.Analytics.EventsScriptableObject,System.String,System.String,UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.ScrollView,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Type}},System.Type,System.Type,System.Boolean,MAGES.Analytics.Editor.EventsStateMachine)">
+            <summary>
+            Intializes and draws the generic UI elements used for each event type.
+            </summary>
+            <param name="so"> The scriptable object that is used for storing the values of the UI elements. </param>
+            <param name="entryName"> The name of the event. </param>
+            <param name="savePath"> The path to save the scriptable object to. </param>
+            <param name="parent"> The parent of the foldout of the UI element of this event type UI. </param>
+            <param name="foldout"> The foldout element to attach the UI elements to. </param>
+            <param name="editExistingItems"> The dropdown element that contains the list of all the events. </param>
+            <param name="items"> The list of all the events. </param>
+            <param name="internalType"> The type of the event definition. </param>
+            <param name="internalTypeUI"> The type of the event definition UI. </param>
+            <param name="editMode"> Whether the event is being edited or not. </param>
+            <param name="stateMachine"> The state machine that is used to transition between the states. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <summary>
+            Saves the values of the UI elements to the provided scriptable object.
+            </summary>
+            <param name="so"> The scriptable object to save the UI elements values to. </param>
+            <param name="key"> The name of the event to save. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <summary>
+            Deletes the event UI elements and removes their stored reference from the provided scriptable object.
+            </summary>
+            <param name="so"> The scriptable object to delete the UI elements values from. </param>
+            <param name="key"> The name of the event to delete. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <summary>
+            Draws the event specific UI elements for each type.
+            </summary>
+            <param name="so"> The scriptable object that stores the UI elements values. </param>
+            <param name="foldout"> The foldout to attach event specific UI elements to. </param>
+            <param name="editMode"> Specifies whether or not we are int edit or create mode. </param>
+            <param name="entryName"> The name of the current entry that gets edited. </param>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.BaseTypeEventUI.PayloadElement">
+            <summary>
+            A class that represents an element of an event payload which consists of a key value pair.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.BaseTypeEventUI.PayloadElement.#ctor(System.String,UnityEditor.MonoScript)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.BaseTypeEventUI.PayloadElement"/> class.
+            </summary>
+            <param name="key"> The key of the event payload. </param>
+            <param name="value"> The value of the event payload. </param>
+            <param name="choices"> A list that holds the full names of the payload values. </param>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseTypeEventUI.PayloadElement.Key">
+            <summary>
+            Gets or sets the text field that holds the keys of the payload.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.BaseTypeEventUI.PayloadElement.Value">
+            <summary>
+            Gets or sets the dropdown field that holds the values of the payload.
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.CustomEventTypeUI">
+            <summary>
+            Class that contains and draws the UI for the custom events type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomEventTypeUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.CustomEventTypeUI"/> class.
+            </summary>
+            <param name="list"> Unused argument. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomEventTypeUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseTypeEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomEventTypeUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomEventTypeUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.CustomTypeUI">
+            <summary>
+            Class that contains and draws the UI for the custom analytics type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomTypeUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.CustomTypeUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomTypeUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomTypeUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.CustomTypeUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI">
+            <summary>
+            Class for the analytics type that triggers an error when an action is not performed while another action is still running.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.DidNotPerformRequiredActionUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ErrorAngleUI">
+            <summary>
+            Class that represents the analytics type that triggers when an insert action insertion angle is more than the specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorAngleUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ErrorAngleUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorAngleUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorAngleUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorAngleUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ErrorColliderUI">
+            <summary>
+            Class for the analytics type that triggers when a gameobject collides with a collider.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorColliderUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ErrorColliderUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorColliderUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorColliderUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorColliderUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ErrorsStateMachine">
+            <summary>
+            The state machine for the errors.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorsStateMachine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ErrorsStateMachine"/> class.
+            </summary>
+            <param name="selectedSceneGraphData"> The name of the selected scene graph data. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorsStateMachine.State0(UnityEngine.UIElements.ScrollView)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State0(UnityEngine.UIElements.ScrollView)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ErrorsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.EventsStateMachine">
+            <summary>
+            The state machine for the events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.EventsStateMachine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.EventsStateMachine"/> class.
+            </summary>
+            <param name="selectedSceneGraphData"> The name of the selected scene graph data. </param>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.EventsStateMachine.TypesDropdown">
+            <summary>
+            Gets the dropdown field for the types.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.EventsStateMachine.CreateExistingItemButton(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.ScrollView,System.String,System.Type,UnityEngine.UIElements.ScrollView,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Type}},System.Boolean)">
+            <summary>
+            Creates a new button for the existing items view.
+            </summary>
+            <param name="so"> The scriptable object associated with this item. </param>
+            <param name="parent"> The parent element of this tab. </param>
+            <param name="buttonText"> The text of the button. </param>
+            <param name="entryType"> The type of the selected error. </param>
+            <param name="existingItemsView"> The scroll view containg all the existing items(buttons). </param>
+            <param name="items"> The items that are currently displayed in the existing item scrollview. </param>
+            <param name="allTypesMode"> Whether or not the all types option is selected from the dropdown. </param>
+            <returns> The created button. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.EventsStateMachine.State0(UnityEngine.UIElements.ScrollView)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State0(UnityEngine.UIElements.ScrollView)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.EventsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.EventsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.InteractionRestrictionUI">
+            <summary>
+            Class for the analytics type that triggers when a interactable interacts with an interactor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.InteractionRestrictionUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.InteractionRestrictionUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.InteractionRestrictionUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.InteractionRestrictionUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.InteractionRestrictionUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.MAGESAnalyticsEditor">
+            <summary>
+            The main analytics editor UI.
+            </summary>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.MAGESAnalyticsEditor.Title">
+            <inheritdoc cref="P:MAGES.Editor.BaseMAGESPanelPage.Title"/>
+        </member>
+        <member name="P:MAGES.Analytics.Editor.MAGESAnalyticsEditor.Order">
+            <inheritdoc cref="P:MAGES.Editor.BaseMAGESPanelPage.Order"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.MAGESAnalyticsEditor.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.Initialize(MAGES.Editor.MAGESPanel)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.MAGESAnalyticsEditor.CreateGUI(MAGES.Bundle)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.CreateGUI(MAGES.Bundle)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.MAGESAnalyticsEditor.TrySelect(MAGES.Bundle)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.TrySelect(MAGES.Bundle)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.MAGESAnalyticsEditor.OnSelectedBundleChanged(MAGES.Bundle)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.OnSelectedBundleChanged(MAGES.Bundle)"/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ObjectivesStateMachine">
+            <summary>
+            The state machine for the objectives.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ObjectivesStateMachine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ObjectivesStateMachine"/> class.
+            </summary>
+            <param name="selectedSceneGraphData"> The name of the selected scene graph data. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ObjectivesStateMachine.State0(UnityEngine.UIElements.ScrollView)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State0(UnityEngine.UIElements.ScrollView)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ObjectivesStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State1(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ObjectivesStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsStateMachine.State2(UnityEngine.UIElements.ScrollView,System.Action,System.Boolean)"/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.OnCollisionEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when a specified collision happens.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnCollisionEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.OnCollisionEventUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnCollisionEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnCollisionEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnCollisionEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.OnInteractionEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when a specified interaction happens.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnInteractionEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.OnInteractionEventUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnInteractionEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnInteractionEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.OnInteractionEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.PerformedWrongActionUI">
+            <summary>
+            Class for the analytics type that triggers an error when an action is performed while another action is still running.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.PerformedWrongActionUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.PerformedWrongActionUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.PerformedWrongActionUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.PerformedWrongActionUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.PerformedWrongActionUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.RangeOfMotionLimitUI">
+            <summary>
+            Class for the analytics type that triggers when a gameobject is moved(in aggregate) more than a specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RangeOfMotionLimitUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.RangeOfMotionLimitUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RangeOfMotionLimitUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RangeOfMotionLimitUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RangeOfMotionLimitUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.RotationRestrictionUI">
+            <summary>
+            Class for the analytics type that triggers when a gameobject surpasses a specified rotation limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RotationRestrictionUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.RotationRestrictionUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RotationRestrictionUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RotationRestrictionUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.RotationRestrictionUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ScenegraphRenameDetector">
+            <summary>
+            The detector that monitors Scenegraph renaming
+            </summary>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.ScoreLimitUI">
+            <summary>
+            Class for the analytics type that triggers when an action / entire operation has less score than a specified limit.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ScoreLimitUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.ScoreLimitUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ScoreLimitUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ScoreLimitUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.ScoreLimitUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.SessionEndedEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when a session ends.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionEndedEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.SessionEndedEventUI"/> class.
+            </summary>
+            <param name="list"> Unused argument. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionEndedEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionEndedEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionEndedEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.SessionStartedEventUI">
+            <summary>
+            Class that contains and draws the UI elements for the event type that triggers when a session starts.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionStartedEventUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.SessionStartedEventUI"/> class.
+            </summary>
+            <param name="list"> Unused argument. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionStartedEventUI.Draw(MAGES.Analytics.EventsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionStartedEventUI.Save(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.SessionStartedEventUI.Delete(MAGES.Analytics.EventsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.TabbedMenuController">
+            <summary>
+            Class for handling the tabbed menu.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.#ctor(UnityEngine.UIElements.VisualElement,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.TabbedMenuController"/> class.
+            </summary>
+            <param name="root"> The root visual element. </param>
+            <param name="sceneGraphDataName"> The scene graph data name. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.RegisterTabCallbacks">
+            <summary>
+            Registers the tab callbacks for all available tabs.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.SetSceneGraphData(System.String)">
+            <summary>
+            Sets the scene graph data.
+            </summary>
+            <param name="sceneGraphDataName"> The scene graph data name. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.TabIsCurrentlySelected(UnityEngine.UIElements.Label)">
+            <summary>
+            Method that returns a Boolean indicating whether a tab is currently selected.
+            </summary>
+            <param name="tab"> The given tab. </param>
+            <returns> True if the tab is selected or false otherwise. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.GenerateContentName(UnityEngine.UIElements.Label)">
+            <summary>
+            Generates the associated tab content name by for the given tab name.
+            </summary>
+            <param name="tab"> The given tab. </param>
+            <returns> The associated tab content name by for the given tab name. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.TabOnClick(UnityEngine.UIElements.ClickEvent)">
+            <summary>
+            Method for the tab on-click event.
+            </summary>
+            <param name="evt"> The click event. </param>
+            <remarks> If it is not selected, find other tabs that are selected, unselect them then select the tab that was clicked on. </remarks>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.GetAllTabs">
+            <summary>
+            Returns all tabs.
+            </summary>
+            <returns> All the tabs. </returns>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.SelectTab(UnityEngine.UIElements.Label)">
+            <summary>
+            Selects the given tab.
+            </summary>
+            <param name="tab"> The tab to select. </param>
+            <remarks> Adds the currentlySelectedTab class to the tab and removes the unselectedContent class from the tab content. </remarks>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.UnselectTab(UnityEngine.UIElements.Label)">
+            <summary>
+            Takes a tab as a parameter and removes the currentlySelectedTab class, then finds the tab content and adds the unselectedContent class.
+            </summary>
+            <param name="tab"> The given tab. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TabbedMenuController.FindContent(UnityEngine.UIElements.Label)">
+            <summary>
+            Takes a tab as a parameter and returns the associated content element.
+            </summary>
+            <param name="tab"> The given tab. </param>
+            <returns> The associated content element. </returns>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.TimeLimitUI">
+            <summary>
+            Class that contains and draws the UI for the analytics type that triggers when an action / the entire operation running time is more / less than a specified value.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TimeLimitUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.TimeLimitUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TimeLimitUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)">
+            <inheritdoc cref="M:MAGES.Analytics.Editor.BaseAnalyticsUI.Draw(MAGES.Analytics.AnalyticsScriptableObject,UnityEngine.UIElements.VisualElement,System.Boolean,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TimeLimitUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.TimeLimitUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Analytics.Editor.WrongAnswerUI">
+            <summary>
+            Class that represents the analytics type that triggers when a question action is replied wrongly.
+            </summary>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.WrongAnswerUI.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Analytics.Editor.WrongAnswerUI"/> class.
+            </summary>
+            <param name="actions"> The available actions. </param>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.WrongAnswerUI.Save(MAGES.Analytics.AnalyticsScriptableObject,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Analytics.Editor.WrongAnswerUI.Delete(MAGES.Analytics.AnalyticsScriptableObject,System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

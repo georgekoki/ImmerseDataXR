@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Analytics/Editor/Panel/MAGESAnalyticsEditor.uss?fileID=7433441132597879392&amp;guid=bea0a41a3bcc4a74f90891891925b2b2&amp;type=3#MAGESAnalyticsEditorNew" />
+    <ui:Label tabindex="-1" text="Analytics" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ProjectAnalytics" />
+    <ui:VisualElement name="tabs" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Errors" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ErrorsTab" class="tab currentlySelectedTab" />
+        <ui:Label tabindex="-1" text="Objectives" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ObjectivesTab" class="tab" />
+        <ui:Label tabindex="-1" text="Events" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EventsTab" class="tab" />
+    </ui:VisualElement>
+    <ui:VisualElement name="tabContent" style="flex-grow: 1;">
+        <ui:ScrollView name="ErrorsContent" class="content" style="flex-grow: 1;">
+            <ui:DropdownField label="Action" index="-1" name="ActionsDropdown" class="contentItem" />
+        </ui:ScrollView>
+        <ui:ScrollView name="ObjectivesContent" class="unselectedContent content">
+            <ui:DropdownField label="Objective Type" index="-1" name="ObjectiveTypeDropdown" class="contentItem" />
+        </ui:ScrollView>
+        <ui:ScrollView name="EventsContent" class="unselectedContent content">
+            <ui:DropdownField label="Event Type" index="-1" name="EventTypeDropdown" class="contentItem" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

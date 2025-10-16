@@ -1,0 +1,216 @@
+.mages-analytics-editor
+{
+    margin: 5px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+#ProjectAnalytics {
+    -unity-font-style: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#tabs {
+    flex-direction: row;
+    background-color: rgb(40, 40, 40);
+    font-size: 14px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    flex-grow: 1;
+    min-height: 40px;
+}
+
+.tab {
+    flex-grow: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -unity-text-align: middle-center;
+    height: 40px;
+}
+
+.currentlySelectedTab {
+    background-color: rgb(60, 60, 60);
+    -unity-font-style: bold;
+}
+
+#tabContent {
+    background-color: rgb(60, 60, 60);
+    font-size: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.content {
+    height: 2000px;
+}
+
+.contentItem {
+    padding-top: 20px;
+    margin-left: 10px;
+    margin-right: 150px;
+    -unity-text-align: middle-left;
+}
+
+.addNewButton {
+    margin-left: auto;
+    margin-right: 151px;
+    -unity-text-align: middle-center;
+    background-color: rgb(220, 220, 220);
+    color: black;
+}
+
+.itemButton {
+    background-color: rgb(40, 40, 40);
+	-unity-text-align: middle-left;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itemButtonIcon {
+    background-image: url("./Icons/edit.png");
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+}
+
+.editScoreIcon {
+    background-image: url("./Icons/edit.png");
+    background-color: rgb(40, 40, 40);
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    margin-right: 150px;
+    margin-top: 11px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.searchBox {
+	flex-grow: 1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: -2px;
+    max-width: 300px;
+    min-width: 150px;
+    padding-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.scoringFloatField {
+	flex-grow: 1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: -2px;
+    padding-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.searchIcon {
+    background-image: url("./Icons/search.png");
+    background-color: rgb(40, 40, 40);
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    margin-right: 300px;
+    margin-top: 11px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.editExistingFoldout {
+    flex-grow: 1;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 149px;
+}
+
+.popupButton {
+    flex-grow: 1;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+    -unity-text-align: upper-left;
+}
+
+.unity-foldout__toggle > .unity-toggle__input {
+    background-color: rgb(40, 40, 40);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.dropdown-item {
+    background-color: rgb(40, 40, 40);
+    padding: 25px;
+}
+
+.unselectedContent {
+    display: none;
+}
+
+/* Overriden */
+
+/* Scrollbar fix */
+.unity-base-field__input {
+    background-color: rgb(40, 40, 40);
+    border-radius: 5px;
+    height: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
+    min-width: 0px;
+}
+
+/* Dropdown style fix */
+.unity-base-popup-field__input {
+    background-color: rgb(40, 40, 40);
+    font-size: 16px;
+    border-radius: 5px;
+    height: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 0px;
+}
+
+/* TextField style fix */
+.unity-base-text-field__input--single-line {
+    background-color: rgb(40, 40, 40);
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 30px;
+    padding-left: 20px;
+    min-width: 0px;
+    font-size: 16px;
+}
+
+/* Buttons style fix */
+Button{
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+Label{
+    font-size: 16px;
+}
+
+.unity-list-view__item{
+    background-color: rgb(30, 30, 30);
+}
+
+.unity-list-view__item:hover{
+    background-color: rgb(60, 60, 60);
+}
+
+.unity-list-view__footer{
+    background-color: rgb(30, 30, 30);
+}
